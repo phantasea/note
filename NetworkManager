@@ -1,0 +1,7 @@
+如果出现提示 device not managed by networkmanager, 则可操作如下解决:
+sudo vim /etc/NetworkManager/NetworkManager.conf
+----change "managed=false" to "managed=true"
+
+sudo service network-manager restart
+
+maybe need restart system to GUI once

@@ -1,0 +1,8 @@
+1. Get waf and run:
+   ./waf-light configure build
+
+2. Insall fuse-7z and run:
+   python waf configure --prefix=/usr
+   python waf
+   sudo python waf install --destdir=/
+   

@@ -1,0 +1,5 @@
+shell cmd: acpi
+
+file:
+/sys/class/power_supply/BAT0/**
+/sys/class/thermal/**

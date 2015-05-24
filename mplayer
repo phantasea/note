@@ -1,0 +1,1 @@
+mplayer -vo fbdev2 -vf scale=1024:768 xxxx.avi

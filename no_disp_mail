@@ -1,0 +1,2 @@
+edit /etc/pam.d/login
+comment session optional pam_mail.so standard

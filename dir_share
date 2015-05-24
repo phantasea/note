@@ -1,0 +1,5 @@
+1. cd to the directory you wanna share with others
+2. exec 'python -m SimpleHTTPServer'
+3. for other people, input things below in web browser to get files shared:
+   http://[myip]:8000
+   if in the same machine, you can input: http://127.0.0.1:8000

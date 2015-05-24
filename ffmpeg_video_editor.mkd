@@ -1,0 +1,15 @@
+video editor: ffmpeg
+====================
+
+*case1:*
+    ffmpeg -ss 00:03:00 -t 00:01:00 -acodec copy -vcodec copy -i ~/vid/temp.MP4 clip.MP4
+
+*case2:*
+    ffmpeg -sameq -intra -i ~/vid/tmep.mpg ~/vid/intra.mpg
+
+*case3:*
+    ffmpeg -ss 00:00:30 -t 00:00:30 -vsync 0 -acodec libfaac -vcodec libx264 -i temp.mpg after.mpg
+
+*case4:*
+    ffmpeg -f mp4 -acodec libfaac -vcodec libx264 -sameq -i temp1.avi -i temp2.avi result.avi
+

@@ -1,0 +1,10 @@
+change file: /etc/rc.local
+    /usr/bin/loadkeys /home/lynna/.etc/mykbd
+
+
+setkeycodes xx yy
+xx: showkey -s
+yy: showkey -k
+
+
+Xwindow: .xmodmaprc

@@ -1,0 +1,5 @@
+sudo apt-get install libssl-dev
+sudo ./configure
+sudo make
+sudo make clean
+sudo make install

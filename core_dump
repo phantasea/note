@@ -1,0 +1,8 @@
+1. 生成core dump文件的方法：
+   ulimit -c  //查看是发为0
+
+   如果为0，执行
+   ulimit -c unlimited
+
+2. 调试core dump文件：
+   gdb ./core.xxxx

@@ -1,0 +1,16 @@
+/bin/bash: ./depcomp: No such file or directory
+
+fix bad depcomp link in local dir
+
+search for your depcomp path
+
+~/app/urlview-master$ loc depcomp
+/home/lynna/app/moc-2.4.4/depcomp
+/home/lynna/app/moc-2.4.4/libltdl/config/depcomp
+/home/lynna/app/moc-2.5.0-beta2/depcomp
+/home/lynna/app/tina-0.1.11/depcomp
+/home/lynna/app/vifm-0.7.6/depcomp
+/usr/share/libtool/config/depcomp
+
+~/app/urlview-master$ ln -sf /usr/share/libtool/config/depcomp ./depcomp
+                                                            

@@ -1,0 +1,5 @@
+make file .hushlogin in home directory
+
+if wanna available for all users, touch file .hushlogin in /etc/skel
+
+ps: /etc/issue

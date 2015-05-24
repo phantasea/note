@@ -1,0 +1,5 @@
+sudo apt-get install python-mutagen
+
+mid3iconv -q -e GBK *.mp3
+
+mid3v2 somename.mp3

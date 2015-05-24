@@ -1,0 +1,18 @@
+./configure --disable-desktop-files --without-gtk --without-X11 --without-dyn-X11
+
+src/running.c
+func: shellout (called by edit_cmd in file commands.c)
+set always:   pause = 0;
+
+//UI DIY
+ui/ui.c
+
+//for vifm-0.7.8
+src/running.c
+func: view_file
+if vicmd is not vim, forget line/column
+
+//for vifm-0.7.8 newer
+src/vim.c
+func: vim_view_file
+if vicmd is not vim, forget line/column

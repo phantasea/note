@@ -1,0 +1,15 @@
+fim * > rmfile    (press enter will mark this pic to rmfile)
+xargs rm -rf < rmfile.txt  (has prob if file contains spaces)
+xargs -I{} sh -c 'rm {}' < rmfile.txt
+
+cat rmfile.txt | xargs echo rm | sh
+
+cat rmfile.txt | while read file; do rm "$file"; done     (no prob even containing spaces)
+while read file; do rm "$file"; done < rmfile.txt         (no prob even containing spaces)
+
+for f in $(cat rmfile.txt); do
+    rm $f
+done
+
+
+

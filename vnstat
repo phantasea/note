@@ -1,0 +1,5 @@
+vnstat --lflist
+route -n
+.vnstatrc
+sudo vnstat -u -i ppp0
+

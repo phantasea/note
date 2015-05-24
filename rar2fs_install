@@ -1,0 +1,23 @@
+MAKE LIBUNRAR:
+
+1. wget ftp://ftp.rarlab.com/rar/unrarsrc-5.2.3.tar.gz
+2. tar -zxf ......
+3. cd unrar
+4. make lib -f makefile
+5. cp libunrar.so /usr/lib
+
+
+INSTALL RAR2FS:
+
+1. get rar2fs (such as git clone)
+2. cd rar2fs
+3. autoreconf -f -i
+4. ./configure --with-unrar=/path/to/unrar
+5. make
+6. sudo make install
+
+mount:
+rar2fs -o allow_other /path/to/folder/with/rar_file /path/to/mount/point
+
+unmount:
+fusermount -u /path/to/mount/point

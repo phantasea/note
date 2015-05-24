@@ -1,0 +1,7 @@
+1. sudo mv /etc/init/ssh.conf /etc/init/ssh.conf.disabled
+
+2. in file /etc/init/ssh.conf, comment out the "start on" line
+
+3. sudo apt-get install bum, disable "openssh-server"
+
+4. update-rc.d ssh enable/disable  #set the ssh on/off
