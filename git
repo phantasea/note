@@ -1,0 +1,2 @@
+git/tig 中文乱码问题：
+git config --global core.quotepath false
