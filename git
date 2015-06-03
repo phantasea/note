@@ -1,2 +1,14 @@
 git/tig 中文乱码问题：
 git config --global core.quotepath false
+
+intall the latest git using apt-get:
+  sudo add-apt-repository ppa:git-core/ppa
+  sudo apt-get update
+  sudo apt-get install git
+
+install git with source code:
+  autoconf
+  ./configure --prefix=/usr
+  make
+  sudo make install
+
