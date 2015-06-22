@@ -12,3 +12,8 @@ install git with source code:
   make
   sudo make install
 
+
+# change git push repo:
+git remote set-url --push origin git@github.com:user/proj.git
+or
+git remote set-url --push origin https://github.com/user/proj.git (but will be asked to enter username and password)
