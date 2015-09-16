@@ -1,5 +1,8 @@
 sudo apt-get install python-mutagen
-
 mid3iconv -q -e GBK *.mp3
-
 mid3v2 somename.mp3
+
+moc open failed: no decoder plugins have been loaded
+sudo apt-get install moc-ffmpeg-plugin
+cd /usr/local/lib
+ln -s /usr/lib/moc 
