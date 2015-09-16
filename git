@@ -12,6 +12,8 @@ install git with source code:
   make
   sudo make install
 
+# add remote repo
+git remote add origin git@github.com:phantasea/misc.git
 
 # change git push repo:
 git remote set-url --push origin git@github.com:user/proj.git
