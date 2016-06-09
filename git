@@ -19,3 +19,7 @@ git remote add origin git@github.com:phantasea/misc.git
 git remote set-url --push origin git@github.com:user/proj.git
 or
 git remote set-url --push origin https://github.com/user/proj.git (but will be asked to enter username and password)
+
+# git tag
+git tag -a v-sim1.0 -m "base version tag for sim1"
+git push origin v-sim1.0
