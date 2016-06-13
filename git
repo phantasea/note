@@ -23,3 +23,6 @@ git remote set-url --push origin https://github.com/user/proj.git (but will be a
 # git tag
 git tag -a v-sim1.0 -m "base version tag for sim1"
 git push origin v-sim1.0
+
+# git rm but keep file in disk
+git rm --cached w3m/bookmark.html
