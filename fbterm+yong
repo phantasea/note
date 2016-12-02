@@ -1,4 +1,4 @@
-1. ÏÂÔØ²¢°²×°fbterm:
+1. ä¸‹è½½å¹¶å®‰è£…fbterm:
 
 wget -c http://fbterm.googlecode.com/files/fbterm-1.7.0.tar.gz
 tar -xzf fbterm-1.7.0.tar.gz
@@ -8,89 +8,89 @@ make
 sudo make install
 
 
-½«ÓÃ»§¼ÓÈëvideo×é:
+å°†ç”¨æˆ·åŠ å…¥videoç»„:
 
 sudo adduser user video
 
 
-2. ÏÂÔØ²¢°²×°Ð¡Ð¡Æ´ÒôÊäÈë·¨(yong),ÓÉÓÚ¸ÃÈí¼þÔÚLinuxÏÂÖ»Ìá¹©7zÑ¹Ëõ
+2. ä¸‹è½½å¹¶å®‰è£…å°å°æ‹¼éŸ³è¾“å…¥æ³•(yong),ç”±äºŽè¯¥è½¯ä»¶åœ¨Linuxä¸‹åªæä¾›7zåŽ‹ç¼©
 
-°üÎÄ¼þ,ËùÒÔÐèÏÂÔØ²¢°²×°p7zip¹¤¾ß°ü.
-(1). °²×°p7zip:
-ÏÂÔØµØÖ·:http://sourceforge.net/projects/p7zip/files/p7zip/9.20.1/p7zip_9.20.1_src_all.tar.bz2/download
+åŒ…æ–‡ä»¶,æ‰€ä»¥éœ€ä¸‹è½½å¹¶å®‰è£…p7zipå·¥å…·åŒ….
+(1). å®‰è£…p7zip:
+ä¸‹è½½åœ°å€:http://sourceforge.net/projects/p7zip/files/p7zip/9.20.1/p7zip_9.20.1_src_all.tar.bz2/download
 
 make 7z
 sudo ./install.sh
 
-(2). ÏÂÔØ²¢½âÑ¹yong:
+(2). ä¸‹è½½å¹¶è§£åŽ‹yong:
 
-ÏÂÔØµØÖ·:http://u.115.com/file/bh1ojcho
+ä¸‹è½½åœ°å€:http://u.115.com/file/bh1ojcho
 
 7z x yong-lin-1.7.0-1.7z
 
 
-(3). ½«yongÒÆµ½"/usr/local"Ä¿Â¼ÏÂ,È»ºó½øÈë"/usr/local/yong",ÔËÐÐÃüÁî
+(3). å°†yongç§»åˆ°"/usr/local"ç›®å½•ä¸‹,ç„¶åŽè¿›å…¥"/usr/local/yong",è¿è¡Œå‘½ä»¤
 
-"sudo ./yong-tool.sh --install"°²×°yong.
-(4). ÐÞ¸ÄÅäÖÃÎÄ¼þ"~/.yong/yong.ini",ÐÞ¸ÄÄ¬ÈÏÊäÈë·¨Îªpinyin:
+"sudo ./yong-tool.sh --install"å®‰è£…yong.
+(4). ä¿®æ”¹é…ç½®æ–‡ä»¶"~/.yong/yong.ini",ä¿®æ”¹é»˜è®¤è¾“å…¥æ³•ä¸ºpinyin:
 
 [IM]
 default=6
-ÖÐÓ¢ÎÄÇÐ»»¼ü¸ÄÎª×óSHIFT:
+ä¸­è‹±æ–‡åˆ‡æ¢é”®æ”¹ä¸ºå·¦SHIFT:
 [key]
 CNen=LSHIFT
 
 
-3. ½Ó×Å,ÐÞ¸ÄfbtermµÄÅäÖÃÎÄ¼þ"~/.fbtermrc",Ê¹fbtermÊ¹ÓÃyong×÷Îª
-ÆäÄ¬ÈÏµÄÊäÈë·¨:
+3. æŽ¥ç€,ä¿®æ”¹fbtermçš„é…ç½®æ–‡ä»¶"~/.fbtermrc",ä½¿fbtermä½¿ç”¨yongä½œä¸º
+å…¶é»˜è®¤çš„è¾“å…¥æ³•:
 
 input-method=yong
 
 
-4. ÓÉÓÚfbtermÊ¹ÓÃµÄÄ¬ÈÏ×ÖÌåmono±íÏÖ±È½Ï²î,ËùÒÔÎÒÎªLinux°²×°ÁË
-Î¢ÈíÑÅºÚÓÃÓÚÖÐÎÄÏÔÊ¾,ConsolasÓÃÓÚÓ¢ÎÄÏÔÊ¾(Ò²¿ÉÒÔÊ¹ÓÃMoncao,¶þÕß±íÏÖ
-¶¼²»´í,µ«ÊÇ¸öÈËÈÏÎªConsolas±íÏÖÈáºÍ,ºÜÊÊºÏ×÷Îª±à³Ì×ÖÌå).ÏÂÃæ¾ÍÉæ¼°µ½
-LinuxÏÂ×ÖÌåµÄ°²×°ÁË:
-(1). °²×°Î¢ÈíÑÅºÚ:
-a. ´ÓWindows 7»òXPÖÐ¸´ÖÆmsyh.ttfºÍmsyhbd.ttfµ½Linux×ÖÌåÄ¿Â¼
-"/usr/share/fonts/truetype/msttcorefonts"ÖÐ,²¢½«Á½¸öÎÄ¼þ
-È¨ÏÞÐÞ¸ÄÎª777,Ò²¿ÉÒÔÐÞ¸ÄÎª644,ÔÙ´´½¨Á½¸öÈíÁ¬½Ó,Èç:
+4. ç”±äºŽfbtermä½¿ç”¨çš„é»˜è®¤å­—ä½“monoè¡¨çŽ°æ¯”è¾ƒå·®,æ‰€ä»¥æˆ‘ä¸ºLinuxå®‰è£…äº†
+å¾®è½¯é›…é»‘ç”¨äºŽä¸­æ–‡æ˜¾ç¤º,Consolasç”¨äºŽè‹±æ–‡æ˜¾ç¤º(ä¹Ÿå¯ä»¥ä½¿ç”¨Moncao,äºŒè€…è¡¨çŽ°
+éƒ½ä¸é”™,ä½†æ˜¯ä¸ªäººè®¤ä¸ºConsolasè¡¨çŽ°æŸ”å’Œ,å¾ˆé€‚åˆä½œä¸ºç¼–ç¨‹å­—ä½“).ä¸‹é¢å°±æ¶‰åŠåˆ°
+Linuxä¸‹å­—ä½“çš„å®‰è£…äº†:
+(1). å®‰è£…å¾®è½¯é›…é»‘:
+a. ä»ŽWindows 7æˆ–XPä¸­å¤åˆ¶msyh.ttfå’Œmsyhbd.ttfåˆ°Linuxå­—ä½“ç›®å½•
+"/usr/share/fonts/truetype/msttcorefonts"ä¸­,å¹¶å°†ä¸¤ä¸ªæ–‡ä»¶
+æƒé™ä¿®æ”¹ä¸º777,ä¹Ÿå¯ä»¥ä¿®æ”¹ä¸º644,å†åˆ›å»ºä¸¤ä¸ªè½¯è¿žæŽ¥,å¦‚:
 
 sudo ln -s msyh.ttf Msyh.ttf
 sudo ln -s msyhbd.ttf Msyhbd.ttf
 
-b. ½Ó×ÅÊ¹ÓÃÈçÏÂÃüÁî×¢²á×ÖÌå:
+b. æŽ¥ç€ä½¿ç”¨å¦‚ä¸‹å‘½ä»¤æ³¨å†Œå­—ä½“:
 
 sudo mkfontscale
 sudo mkfontdir
 sudo fc-cache -fv
 
 
-(2). ConsolasÒ²ÊÇWindowsÏÂµÄ×ÖÌå,Æä°²×°¹ý³ÌÓëÎ¢ÈíÑÅºÚÒ»Ñù,Ö»ÊÇ
-¸Ã×ÖÌåÐèµ½ÍøÉÏÏÂÔØ,ÏÂÔØµØÖ·ÈçÏÂ(ÕâÊÇÑÅºÚºÍConsolasµÄ½áºÏÌå,
-×ÖÌåÃû³ÆÎª"YaHei Consolas Hybrid"):
+(2). Consolasä¹Ÿæ˜¯Windowsä¸‹çš„å­—ä½“,å…¶å®‰è£…è¿‡ç¨‹ä¸Žå¾®è½¯é›…é»‘ä¸€æ ·,åªæ˜¯
+è¯¥å­—ä½“éœ€åˆ°ç½‘ä¸Šä¸‹è½½,ä¸‹è½½åœ°å€å¦‚ä¸‹(è¿™æ˜¯é›…é»‘å’ŒConsolasçš„ç»“åˆä½“,
+å­—ä½“åç§°ä¸º"YaHei Consolas Hybrid"):
 http://files.xiaogui.org/eclipse-indigo/YaHei.Consolas.1.12.rar
 
 
-(3). Monaco±¾À´ÎªMacÏµÍ³ÉÏµÄ×ÖÌå,²»¹ýÏÖÔÚÒÑ¾­ÓÐLinuxÏÂµÄ°æ±¾ÁË,
-¹ÊÖ»ÐèÏÂÔØ²¢½«Æä·Åµ½×ÖÌåÄ¿Â¼¼´¿É,Ò²Ã»ÁËÉÏÃæµÄÂé·³ÁË.
-ÏÂÔØµØÖ·:http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf
+(3). Monacoæœ¬æ¥ä¸ºMacç³»ç»Ÿä¸Šçš„å­—ä½“,ä¸è¿‡çŽ°åœ¨å·²ç»æœ‰Linuxä¸‹çš„ç‰ˆæœ¬äº†,
+æ•…åªéœ€ä¸‹è½½å¹¶å°†å…¶æ”¾åˆ°å­—ä½“ç›®å½•å³å¯,ä¹Ÿæ²¡äº†ä¸Šé¢çš„éº»çƒ¦äº†.
+ä¸‹è½½åœ°å€:http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf
 
 
-5. ÐÞ¸ÄfbtermµÄÄ¬ÈÏ×ÖÌå,±à¼­ÆäÅäÖÃÎÄ¼þ"~/.fbtermrc",ÐÞ¸Äfont-namesµÄ
-ÖµÎª"Consolas,Monaco,Î¢ÈíÑÅºÚ",²¢½«×ÖÌåfont-sizeµ÷´óÖÁ15,Õâ¾Í¿´¸öÈË°®ºÃÁË.
+5. ä¿®æ”¹fbtermçš„é»˜è®¤å­—ä½“,ç¼–è¾‘å…¶é…ç½®æ–‡ä»¶"~/.fbtermrc",ä¿®æ”¹font-namesçš„
+å€¼ä¸º"Consolas,Monaco,å¾®è½¯é›…é»‘",å¹¶å°†å­—ä½“font-sizeè°ƒå¤§è‡³15,è¿™å°±çœ‹ä¸ªäººçˆ±å¥½äº†.
 
 
-6. ×îºóÐÞ¸ÄÓÃ»§ÅäÖÃÎÄ¼þ"~/.bashrc",ÔÚÎÄ¼þÎ²²¿Ìí¼ÓÃüÁî,
-"LANG=zh_CN.UTF-8 fbterm",ÕâÑùÔÚÓÃ»§´Ó¿ØÖÆÌ¨µÇÂ¼ºó,Á¢¼´¾Í¿ÉÒÔ½øÈëfbterm
-ÖÕ¶Ë,²¢ÇÒÄÜ¹»Õý³£Ö§³ÖÖÐÎÄµÄÏÔÊ¾ºÍÊäÈëÁË.
-ÓÉÓÚÔÚGUIÏÂµÄÖÕ¶ËÄÜ¹»ºÜºÃµØÖ§³ÖÖÐÎÄÊäÈëºÍÏÔÊ¾ÁË,ÏÔÈ»²»ÐèÒªÊ¹ÓÃfbtermÁË,
-µ«ÊÇÎªÁËÄÜ¹»ÔÚGUIºÍ¿ØÖÆÌ¨½øÐÐÇÐ»»µÄ¹ý³ÌÖÐ×Ô¶¯µ÷ÓÃfbterm,¹ÊÎÒÔÚbashrcÖÐÌí¼Ó
-ÈçÏÂÅÐ¶Ï:
+6. æœ€åŽä¿®æ”¹ç”¨æˆ·é…ç½®æ–‡ä»¶"~/.bashrc",åœ¨æ–‡ä»¶å°¾éƒ¨æ·»åŠ å‘½ä»¤,
+"LANG=zh_CN.UTF-8 fbterm",è¿™æ ·åœ¨ç”¨æˆ·ä»ŽæŽ§åˆ¶å°ç™»å½•åŽ,ç«‹å³å°±å¯ä»¥è¿›å…¥fbterm
+ç»ˆç«¯,å¹¶ä¸”èƒ½å¤Ÿæ­£å¸¸æ”¯æŒä¸­æ–‡çš„æ˜¾ç¤ºå’Œè¾“å…¥äº†.
+ç”±äºŽåœ¨GUIä¸‹çš„ç»ˆç«¯èƒ½å¤Ÿå¾ˆå¥½åœ°æ”¯æŒä¸­æ–‡è¾“å…¥å’Œæ˜¾ç¤ºäº†,æ˜¾ç„¶ä¸éœ€è¦ä½¿ç”¨fbtermäº†,
+ä½†æ˜¯ä¸ºäº†èƒ½å¤Ÿåœ¨GUIå’ŒæŽ§åˆ¶å°è¿›è¡Œåˆ‡æ¢çš„è¿‡ç¨‹ä¸­è‡ªåŠ¨è°ƒç”¨fbterm,æ•…æˆ‘åœ¨bashrcä¸­æ·»åŠ 
+å¦‚ä¸‹åˆ¤æ–­:
 
 if [ "$TERM" = "linux" ]; then
-# ´Ë´¦Ê¹ÓÃÁË±ðÃû,Èç´Ëµ±ÎÒÃÇÍË³öfbtermºó±ãÄÜ¹»¼òµ¥µÄÍ¨¹ýÃüÁî
-# fbtermÖØÐÂÆô¶¯fbtermÁË,¶ø²»ÓÃÔÙÖ¸¶¨LANG.
+# æ­¤å¤„ä½¿ç”¨äº†åˆ«å,å¦‚æ­¤å½“æˆ‘ä»¬é€€å‡ºfbtermåŽä¾¿èƒ½å¤Ÿç®€å•çš„é€šè¿‡å‘½ä»¤
+# fbtermé‡æ–°å¯åŠ¨fbtermäº†,è€Œä¸ç”¨å†æŒ‡å®šLANG.
     alias fbterm='LANG=zh_CN.UTF-8 fbterm'
     fbterm
     fi
