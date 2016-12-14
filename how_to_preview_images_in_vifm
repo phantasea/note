@@ -1,0 +1,207 @@
+How to preview images
+
+From Vifm Wiki
+Jump to: navigation, search
+
+Starting with 0.8 vifm provides four macros describing preview area that can be used along with external applications to
+preview images in a terminal, they are:
+
+ • %px x coordinate of top-left corner of preview area;
+ • %py y coordinate of top-left corner of preview area;
+ • %pw width of preview area;
+ • %ph height of preview area.
+
+Below is a description and an example.
+
+Contents
+
+ • 1 Prerequisites
+ • 2 Setup
+ • 3 Notes
+     □ 3.1 State of terminal support
+     □ 3.2 Positioning
+     □ 3.3 Clearing
+ • 4 See also
+
+Prerequisites[edit]
+
+1. w3mimgdisplay which might be part of w3m package or a separate one.
+
+2. Terminal emulator without double buffering, otherwise w3m will fail to display images properly.
+
+Setup[edit]
+
+1. Create script that invokes w3m. w3mimgdisplay executable might reside in different locations depending on the distribution.
+Below is a sample script, which can be used after correcting several parameters at the top.
+
+#!/bin/bash
+#
+# Based on script by z3bra -- 2014-01-21
+ 
+W3MIMGDISPLAY="/usr/libexec/w3m/w3mimgdisplay"
+FONTH=15 # Size of one terminal row
+FONTW=7 # Size of one terminal column
+ 
+X=$1
+Y=$2
+COLUMNS=$3
+LINES=$4
+FILENAME=$5
+ 
+read width height <<< `echo "5;$FILENAME" | $W3MIMGDISPLAY`
+if [ -z "$width" -o -z "$height" ]; then
+    echo 'Error: Failed to obtain image size.'
+    exit 1
+fi
+ 
+x=$((FONTW * X))
+y=$((FONTH * Y))
+ 
+max_width=$((FONTW * COLUMNS))
+max_height=$((FONTH * LINES))
+ 
+if [ "$width" -gt "$max_width" ]; then
+    height=$((height * max_width / width))
+    width=$max_width
+fi
+if [ "$height" -gt "$max_height" ]; then
+    width=$((width * max_height / height))
+    height=$max_height
+fi
+ 
+w3m_command="0;1;$x;$y;$width;$height;;;;;$FILENAME\n4;\n3;"
+ 
+echo -e "$w3m_command" | $W3MIMGDISPLAY
+
+2. Update vifmrc with preview command like the following:
+
+fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+         \ imgt %px %py %pw %ph %c
+
+Replace "imgt" with path to preview script or just update name if script is available in your $PATH (which is the case if you
+put it under ~/.vifm/scripts).
+
+Notes[edit]
+
+State of terminal support[edit]
+
+One should be aware that this is kinda hack as terminals weren't made to display pictures, thus there might be some
+difficulties (like double buffering or incomplete clearing). That said, it does work in sufficient amount of configurations.
+
+Positioning[edit]
+
+When running inside terminal emulators, coordinates known to applications are relative to pane/window position. This should be
+taken into account, because without applying proper offsets images may appear in unexpected locations.
+
+Clearing[edit]
+
+Depending on your terminal this may be enough or require additional script for clearing image leftovers (below), development
+version of vifm and changed :fileviewer command like this:
+
+fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+         \ imgt %px %py %pw %ph %c
+         \ %pc
+         \ imgc %px %py %pw %ph
+
+Where imgc is a script that clears background of the terminal (it's configuration is at the top):
+
+#!/bin/bash
+ 
+W3MIMGDISPLAY="/usr/libexec/w3m/w3mimgdisplay"
+FONTH=15 # Size of one terminal row
+FONTW=7 # Size of one terminal column
+ 
+X=$1
+Y=$2
+COLUMNS=$3
+LINES=$4
+ 
+x=$((FONTW * X))
+y=$((FONTH * Y))
+ 
+erase="6;$x;$y;$(( FONTW*COLUMNS ));$(( FONTH*LINES ))\n3;"
+echo -e "$erase" | $W3MIMGDISPLAY
+
+This is the case at least for urxvt.
+
+See also[edit]
+
+ • Images in terminal for base of the script above.
+ • Issue #82 on GitHub for similar description and some discussion of some issues.
+ • Issue #102 on GitHub for report on image clearing issues.
+
+Retrieved from "https://wiki.vifm.info/index.php?title=How_to_preview_images&oldid=353"
+
+Navigation menu
+
+Personal tools
+
+ • Create account
+ • Log in
+
+Namespaces
+
+ • Page
+ • Discussion
+
+Variants 
+
+Views
+
+ • Read
+ • Edit
+ • View history
+
+Actions 
+
+Search
+
+[                    ][Search][Go]
+ 
+
+Navigation
+
+ • Main page
+ • Recent changes
+ • Random page
+ • Help
+
+External
+
+ • Main site
+ • Downloads
+ • Gallery
+ • Color schemes
+ • Mailing list
+
+Documentation
+
+ • Tutorial
+ • Vim doc
+ • Online man
+
+Topics
+
+ • FAQ
+ • HOWTOs
+ • Tips
+ • Scripts
+
+Tools
+
+ • What links here
+ • Related changes
+ • Special pages
+ • Printable version
+ • Permanent link
+ • Page information
+
+ • This page was last modified on 21 July 2015, at 12:22.
+ • This page has been accessed 2,363 times.
+
+ • Privacy policy
+ • About Vifm Wiki
+ • Disclaimers
+
+ • Powered by MediaWiki
+
