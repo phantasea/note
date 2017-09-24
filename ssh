@@ -1,0 +1,18 @@
+//disable firewall
+sudo ufw disable
+
+//set ip setting like:
+x61: 192.168.1.22/24, 192.168.1.1
+x41: 192.168.1.33/24, 192.168.1.1
+
+//on ssh client
+ssh-keygen -t rsa
+sudo service ssh restart //maybe need restart ssh
+ssh-copy-id user@192.168.1.33
+
+//on ssh server
+ps -ef |grep sshd
+
+uncomment lines below in file /etc/ssh/ssd_config
+PubkeyAuthentication yes
+RSAAuthenticaion     yes
