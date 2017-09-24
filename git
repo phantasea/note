@@ -8,7 +8,7 @@ intall the latest git using apt-get:
 
 install git with source code:
   autoconf
-  ./configure --prefix=/usr
+  ./configure --prefix=/usr/local
   make
   sudo make install
 
@@ -26,3 +26,9 @@ git push origin v-sim1.0
 
 # git rm but keep file in disk
 git rm --cached w3m/bookmark.html
+
+# create a new repo on the command line
+git init
+git commit -m "first commit"
+git remote add origin https://github.com/phantasea/bin.git
+git push -u origin master
