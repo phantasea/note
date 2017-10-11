@@ -1,3 +1,5 @@
+sudo apt install ttf-wqy-zenhei
+
 1. 下载并安装fbterm:
 
 wget -c http://fbterm.googlecode.com/files/fbterm-1.7.0.tar.gz
@@ -11,7 +13,6 @@ sudo make install
 将用户加入video组:
 
 sudo adduser user video
-
 
 2. 下载并安装小小拼音输入法(yong),由于该软件在Linux下只提供7z压缩
 
