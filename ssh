@@ -1,17 +1,18 @@
-//disable firewall
-sudo ufw disable
-
 //set ip setting like:
 x61: 192.168.1.22/24, 192.168.1.1
 x41: 192.168.1.33/24, 192.168.1.1
 
-//on ssh client
+//on ssh client - x61
 ssh-keygen -t rsa
 ssh-copy-id user@192.168.1.33
 
-//on ssh server
-ps -ef |grep sshd
+*********************************
+
+//disable firewall on both CS
 sudo ufw disable
+
+//on ssh server - x41
+ps -ef |grep sshd
 sudo service ssh restart //maybe need restart ssh
 
 uncomment lines below in file /etc/ssh/ssd_config

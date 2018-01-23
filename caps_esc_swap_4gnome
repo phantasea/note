@@ -1,0 +1,5 @@
+#change casps to escape:
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
+
+#swap casps and escape:
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:swapescape']"
