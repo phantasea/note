@@ -2,7 +2,7 @@ video editor: ffmpeg
 ====================
 
 *case1:*
-    ffmpeg -ss 00:03:00 -t 00:01:00 -acodec copy -vcodec copy -i ~/vid/temp.MP4 clip.MP4
+    ffmpeg -i ~/vid/temp.mp4 -ss 00:03:00 -t 00:01:00 -acodec copy -vcodec copy clip.MP4
 
 *case2:*
     ffmpeg -sameq -intra -i ~/vid/tmep.mpg ~/vid/intra.mpg
