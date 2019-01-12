@@ -13,3 +13,9 @@ video editor: ffmpeg
 *case4:*
     ffmpeg -f mp4 -acodec libfaac -vcodec libx264 -sameq -i temp1.avi -i temp2.avi result.avi
 
+*case5:*
+    ffmpeg -f concat -safe 0 -loglevel quiet -i input.txt -c copy output.mp4
+    //input.txt
+    file 'input1.mp4'
+    file 'input2.mp4'
+    file 'input3.mp4'
