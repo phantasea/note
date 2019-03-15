@@ -1,3 +1,5 @@
+aplvl
+zathura
 vnstat
 abook
 mutt
@@ -23,6 +25,7 @@ siege
 ngrep
 ffmpeg
 multitail
+lnav
 netcat
 ncdu
 vifm
