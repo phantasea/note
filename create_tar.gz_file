@@ -1,0 +1,6 @@
+The procedure to create a tar.gz file on Linux is as follows:
+
+1.Open the terminal application in Linux.
+2.Run tar command to create an archived named file.tar.gz for given directory name by running: 
+  tar -czvf file.tar.gz <dir1> <dir2>
+3.Verify tar.gz file using the ls command and tar command.
