@@ -1,0 +1,7 @@
+pdftotext is an util of poppler-util
+
+if error of opening pdftotext is about it cannot find libpoppler.so.66,
+
+just re-install poppler-util:
+
+sudo apt install poppler-util
