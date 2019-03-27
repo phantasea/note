@@ -1,0 +1,220 @@
+* re-install Ubuntu 16.04 by LiveCD(USB)
+1. use rufus to make a bootable usb driver
+2. when at step of "Installation type", choose "something else" to continue.
+3. then re-use the existing partitions: /, /opt, /home, /usr/local, swap.
+4. add a new username chris/lynna instead of simone
+5. wait to finish re-installation.
+
+* change username chris to simone
+0. press Ctrl_Alt_F1 to switch to console from GUI
+1. log in with username chris, run below cmd to set root password:
+  sudo passwd root
+2. log out
+  exit
+3. log in with username root using the password just set
+4. change the username and the home directory
+  usermod -l simone -d /home/simone -m chris
+5. change the group name
+  groupmod -n simone chris
+6. lock the root account
+  passwd -l root
+7. log out
+  exit
+8. press Ctrl_Alt_F7 to switch back to GUI, now the simone can be used to log in
+
+* keyboard mapping
+1. replace /etc/rc.local with /opt/etc/rc.local
+2. allow simone to have access to execute "loadkeys /opt/etc/mykbd"
+  //sudo chmod u+s $(command -v loadkeys)
+  sudo chmod u+s /usr/bin/loadkeys
+3. reboot to take effect
+
+* set wifi in GUI desktop
+  username: michel
+  password: sarasalmo8088
+
+* replace the /etc/apt/source.list file with the below lines
+#####################################################################################
+###### Ubuntu Main Repos
+deb http://ro.archive.ubuntu.com/ubuntu/ xenial main restricted universe
+deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial main restricted universe
+
+###### Ubuntu Update Repos
+deb http://ro.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe
+deb http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe
+deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe
+deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe
+#####################################################################################
+
+* update the apt sources
+  sudo apt update
+
+* set to startup to console instead of GUI
+1. edit /etc/default/grub to have the boot in text mode with below parameters
+  GRUB_CMDLINE_LINUX_DEFAULT='text"
+  GRUB_TERMINAL=console
+2. save the changes and exit vim
+3. update grub
+  sudo update-grub
+4. set system control (could use tab completion)
+  sudo systemctl set-default multi-user.target
+  //undo: sudo systemctl set-default graphical.target
+5. restart the system
+  shutdown -r now
+
+* install some key apps
+  sudo apt install exuberant-ctags
+  sudo apt install ttf-wqy-zenhei
+  sudo apt install xfonts-wqy
+  sudo apt install git
+  sudo apt install tig
+  sudo apt install tmux
+  sudo apt install fbterm
+
+* make fbterm to take effect so simone can access to the frame buffer device: /dev/fb0
+  sudo usermod -aG video simone
+  sudo chmod u+s /usr/bin/fbterm (sudo chmod u+s $(command -v fbterm)
+  sudo setcap 'cap_sys_tty_config+ep' /usr/bin/fbterm
+
+* install file manager vifm
+  sudo apt install libncursesw5-dev
+  sudo apt install sshfs
+  sudo apt install curlftpfs
+  sudo apt install fuse
+  sudo apt install fuse-zip
+  sudo apt install fusefat
+  sudo apt install fuseiso
+  cd /opt/apps/vifm
+  ./configure --disable-desktop-files --without-gtk --without-X11 --without-dyn-X11
+  make
+  make install
+
+* SanDisk Extreme Portable SSD not detected
+  sudo apt install exfat-utils 
+  sudo apt install exfat-fuse
+  //sudo apt install gparted 
+
+* install moc under /opt/apps/moc
+  sudo apt install ffmpeg
+  sudo apt install moc-ffmpeg-plugin 
+  sudo apt install python-mutagen
+  sudo apt install libdb-dev
+  sudo apt install libfaad-dev
+  sudo apt install libid3tag0
+  sudo apt install libflac-dev
+  sudo apt install libvorbis-dev
+  sudo apt install libogg-dev
+  sudo apt install libvorbisfile3 
+  sudo apt install libsidplay2-dev
+  sudo apt install libsidutils-dev
+  sudo apt install libspeex-dev 
+  sudo apt install libwavpack-dev 
+  sudo apt install libid3tag0-dev 
+  sudo apt install libmad0-dev 
+  sudo apt install libltdl-dev 
+  sudo apt install libasound2-dev
+  sudo apt install libavcodec-dev
+  make
+  sudo make install
+
+* install fim under /opt/apps/fim
+  sudo apt install bison
+  sudo apt install libjpeg-dev 
+  sudo apt install giflib-tools 
+  sudo apt install libpng12-dev
+  sudo apt install libtiff5-dev 
+  sudo apt install libreadline-dev 
+  sudo apt install libpoppler-dev 
+  sudo apt install libspectre-dev 
+  make
+
+* install pho under /opt/apps/pho
+  sudo apt install libpng12-dev
+  sudo apt install libgdk-pixbuf2.0-dev 
+  sudo apt install libgtk2.0-dev
+  sudo apt install libgnutls-dev 
+  make
+
+* install w3m under /opt/apps/w3m
+  sudo apt install libssl-dev 
+  sudo apt install libgc-dev 
+  ./configure 
+  make
+  sudo make install
+
+* install unrar
+  cd /opt/apps/
+  wget ftp://ftp.rarlab.com/rar/unrarsrc-5.2.3.tar.gz
+  mv ~/unrarsrc-5.2.3.tar.gz ./
+  tar -zxf unrarsrc-5.2.3.tar.gz 
+  cd unrar/
+  make lib -f makefile 
+  sudo cp libunrar.so /usr/lib/
+
+* install rar2fs
+  cd /opt/apps/
+  git clone https://github.com/hasse69/rar2fs
+  cd rar2fs/
+  autoreconf -f -i
+  ./configure --with-unrar=/opt/apps/unrar
+  make
+  sudo make install
+
+* install sublime
+  sudo add-apt-repository ppa:webupd8team/sublime-text-3
+  sudo apt-get update
+  sudo apt-get install sublime-text-installer
+  subl 
+  subl --version
+
+
+sudo apt install tree
+sudo apt install htop
+sudo apt install curl
+sudo apt install mediainfo
+sudo apt install mutt
+sudo apt install msmtp
+sudo apt install procmail
+sudo apt install fetchmail
+sudo apt install abook 
+sudo apt install acpi
+sudo apt install openssl
+sudo apt install ca-certificates
+sudo apt install libgif-dev
+sudo apt install libfuse-dev 
+sudo apt install android-tools-adb
+sudo apt install adb
+sudo apt install multitail 
+sudo apt install fbi
+sudo apt install expect
+sudo apt install fbcat 
+sudo apt install docx2txt 
+sudo apt install antiword 
+sudo apt install highlight
+sudo apt install mediainfo
+sudo apt install pandoc
+sudo apt install transmission-cli 
+sudo apt install atool 
+sudo apt install fuse-zip 
+sudo apt install sshfs
+sudo apt install curlftpfs 
+sudo apt install mpg123
+sudo apt install sdcv
+sudo apt install dict
+sudo apt install tpp 
+sudo apt install ncftp 
+sudo apt install ncdu
+sudo apt install archivemount 
+sudo apt install unrar-free
+sudo apt install silversearcher-ag
+sudo apt install ccal 
+sudo apt install --reinstall ubuntu-desktop
+sudo apt install newsbeuter 
+sudo apt install dstat
+sudo apt install vnstat
+sudo apt install samba
+sudo apt install python-samba 
+sudo apt install samba-libs 
+sudo apt install samba-dev 
+sudo apt install apvlv 
+sudo apt install zathura
