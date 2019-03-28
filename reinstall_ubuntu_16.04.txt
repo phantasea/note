@@ -28,9 +28,11 @@
 ********************************************************
 * keyboard mapping
 1. replace /etc/rc.local with /opt/etc/rc.local
-2. allow simone to have access to execute "loadkeys /opt/etc/mykbd"
-  sudo chmod u+s /bin/loadkeys
+  sudo cp /opt/etc/rc.local /etc/rc.local
+2. make sure rc.local is executable
+  sudo chmod 755 /etc/rc.local
 3. reboot to take effect
+  shutdown -r now
 
 * set wifi in GUI desktop
   username: michel
@@ -99,9 +101,8 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 
 ********************************************************
 * SanDisk Extreme Portable SSD not detected
-  sudo apt install exfat-utils 
   sudo apt install exfat-fuse
-  //sudo apt install gparted 
+  //sudo apt install exfat-utils 
 
 ********************************************************
 * install moc under /opt/apps/moc
@@ -234,4 +235,5 @@ sudo apt install samba-libs
 sudo apt install samba-dev 
 sudo apt install apvlv 
 sudo apt install zathura
+sudo apt install gparted 
 ********************************************************
