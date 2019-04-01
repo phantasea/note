@@ -188,6 +188,10 @@ sudo apt install ibus-pinyin
 sudo apt install tree
 sudo apt install htop
 sudo apt install curl
+sudo apt install lolcat
+sudo apt install fortune
+sudo apt install cowsay
+sudo apt install cmatrix
 sudo apt install mediainfo
 sudo apt install mutt
 sudo apt install msmtp
@@ -227,8 +231,10 @@ sudo apt install silversearcher-ag
 sudo apt install ccal 
 sudo apt install --reinstall ubuntu-desktop
 sudo apt install newsbeuter 
+sudo apt install mtr
 sudo apt install dstat
 sudo apt install vnstat
+sudo apt install vmstat
 sudo apt install samba
 sudo apt install python-samba 
 sudo apt install samba-libs 
