@@ -105,6 +105,12 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   //sudo apt install exfat-utils 
 
 ********************************************************
+* install android tools adbfs
+  there is no need to install any other s/w
+  /opt/util/adbfs -> /opt/apps/adbfs/adbfs
+  .alias ad='adbfs /media/simone/adbfs
+
+********************************************************
 * install moc under /opt/apps/moc
   sudo apt install ffmpeg
   sudo apt install moc-ffmpeg-plugin 
@@ -203,8 +209,6 @@ sudo apt install openssl
 sudo apt install ca-certificates
 sudo apt install libgif-dev
 sudo apt install libfuse-dev 
-sudo apt install android-tools-adb
-sudo apt install adb
 sudo apt install multitail 
 sudo apt install fbi
 sudo apt install expect
