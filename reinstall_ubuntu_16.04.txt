@@ -194,12 +194,16 @@ sudo apt install ibus-pinyin
 sudo apt install tree
 sudo apt install htop
 sudo apt install curl
+sudo apt install tty-clock
+sudo apt install neofetch  //unavailable for 16.04
+sudo apt install screenfetch
 sudo apt install lolcat
 sudo apt install fortune
 sudo apt install cowsay
 sudo apt install cmatrix
 sudo apt install mediainfo
 sudo apt install mutt
+sudo apt install urlview
 sudo apt install msmtp
 sudo apt install procmail
 sudo apt install fetchmail
@@ -233,17 +237,19 @@ sudo apt install archivemount
 sudo apt install unrar-free
 sudo apt install silversearcher-ag
 sudo apt install ccal 
-sudo apt install --reinstall ubuntu-desktop
 sudo apt install newsbeuter 
 sudo apt install mtr
 sudo apt install dstat
 sudo apt install vnstat
 sudo apt install vmstat
+sudo apt install apvlv 
+sudo apt install zathura
+sudo apt install unity-tweak-tool
+sudo apt install tlp tlp-rdw
+sudo apt install gparted 
 sudo apt install samba
 sudo apt install python-samba 
 sudo apt install samba-libs 
 sudo apt install samba-dev 
-sudo apt install apvlv 
-sudo apt install zathura
-sudo apt install gparted 
+sudo apt install --reinstall ubuntu-desktop
 ********************************************************
