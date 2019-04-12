@@ -3,7 +3,7 @@
 1. use rufus to make a bootable usb driver
 2. when at step of "Installation type", choose "something else" to continue.
 3. then re-use the existing partitions without any format
-   (/, /opt, /home, /usr/local, swap)
+   (/, /opt, /home, /usr/local, swap)  //it's recommended to add /usr partition
 4. add a new username chris/lynna instead of simone
 5. wait to finish re-installation.
 
@@ -40,7 +40,6 @@
 
 ********************************************************
 * replace the /etc/apt/source.list file with the below lines
-#####################################################################################
 ###### Ubuntu Main Repos
 deb http://ro.archive.ubuntu.com/ubuntu/ xenial main restricted universe
 deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial main restricted universe
@@ -50,7 +49,6 @@ deb http://ro.archive.ubuntu.com/ubuntu/ xenial-security main restricted univers
 deb http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe
 deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe
 deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe
-#####################################################################################
 
 * update the apt sources
   sudo apt update
@@ -189,11 +187,21 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   subl 
   subl --version
 
+
+********************************************************
+* useful apps
+cfdisk
+
 ********************************************************
 sudo apt install ibus-pinyin 
 sudo apt install tree
 sudo apt install htop
+sudo apt install glances
+sudo apt install acpi
 sudo apt install curl
+sudo apt install aria2
+sudo apt install iwatch
+sudo apt install moreutils  //vidir included
 sudo apt install tty-clock
 sudo apt install neofetch  //unavailable for 16.04
 sudo apt install screenfetch
@@ -208,20 +216,21 @@ sudo apt install msmtp
 sudo apt install procmail
 sudo apt install fetchmail
 sudo apt install abook 
-sudo apt install acpi
 sudo apt install openssl
 sudo apt install ca-certificates
 sudo apt install libgif-dev
 sudo apt install libfuse-dev 
 sudo apt install multitail 
+sudo apt install lnav
 sudo apt install fbi
+sudo apt install fbcat  //fbgrab included
 sudo apt install expect
-sudo apt install fbcat 
 sudo apt install docx2txt 
 sudo apt install antiword 
 sudo apt install highlight
 sudo apt install mediainfo
 sudo apt install pandoc
+sudo apt install httpie
 sudo apt install transmission-cli 
 sudo apt install atool 
 sudo apt install fuse-zip 
@@ -231,10 +240,10 @@ sudo apt install mpg123
 sudo apt install sdcv
 sudo apt install dict
 sudo apt install tpp 
+sudo apt install taskwarrior
 sudo apt install ncftp 
 sudo apt install ncdu
 sudo apt install archivemount 
-sudo apt install unrar-free
 sudo apt install silversearcher-ag
 sudo apt install ccal 
 sudo apt install newsbeuter 
