@@ -241,6 +241,7 @@ sudo apt install sdcv
 sudo apt install dict
 sudo apt install tpp 
 sudo apt install taskwarrior
+sudo apt install calcurse
 sudo apt install ncftp 
 sudo apt install ncdu
 sudo apt install archivemount 
