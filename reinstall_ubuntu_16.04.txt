@@ -254,7 +254,6 @@ sudo apt install vmstat
 sudo apt install apvlv 
 sudo apt install zathura
 sudo apt install localepurge
-sudo apt install bleachbit
 sudo apt install unity-tweak-tool
 sudo apt install tlp tlp-rdw
 sudo apt install gparted 
