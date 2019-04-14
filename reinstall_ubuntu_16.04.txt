@@ -69,9 +69,9 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 
 ********************************************************
 * install some key apps
+  sudo apt install localepurge  //just keep EN and ZH
   sudo apt install exuberant-ctags
   sudo apt install ttf-wqy-zenhei
-  sudo apt install xfonts-wqy
   sudo apt install git
   sudo apt install tig
   sudo apt install tmux
@@ -187,13 +187,14 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   subl 
   subl --version
 
-
 ********************************************************
-* useful apps
-cfdisk
+* apps that might be used but can't be install by apt
+cfdisk  //fdisk TUI
+s-tui   //CPU monitor TUI
 
 ********************************************************
 sudo apt install ibus-pinyin 
+sudo apt install xfonts-wqy
 sudo apt install tree
 sudo apt install htop
 sudo apt install glances
@@ -254,7 +255,6 @@ sudo apt install vnstat
 sudo apt install vmstat
 sudo apt install apvlv 
 sudo apt install zathura
-sudo apt install localepurge
 sudo apt install unity-tweak-tool
 sudo apt install tlp tlp-rdw
 sudo apt install gparted 
