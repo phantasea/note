@@ -6,3 +6,6 @@ moc open failed: no decoder plugins have been loaded
 sudo apt-get install moc-ffmpeg-plugin
 cd /usr/local/lib
 ln -s /usr/lib/moc 
+
+keep in mind to change moc config as mode: -rw------
+sudo chmod go-rw /etc/moc/config

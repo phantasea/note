@@ -132,6 +132,9 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   make
   sudo make install
 
+* keep in mind to change moc config as mode: -rw------
+  sudo chmod go-rw /etc/moc/config
+
 ********************************************************
 * install fim under /opt/apps/fim
   sudo apt install bison
