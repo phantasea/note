@@ -1,5 +1,5 @@
 change file: /etc/rc.local
-    /usr/bin/loadkeys /home/lynna/.etc/mykbd
+    /usr/bin/loadkeys /opt/conf/mykbd
 
 
 setkeycodes xx yy
