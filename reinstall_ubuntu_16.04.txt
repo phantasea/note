@@ -28,7 +28,8 @@
 ********************************************************
 * keyboard mapping
 1. replace /etc/rc.local with /opt/conf/rc.local
-  run symlinks in /opt/util/symlinks
+  //symlink(sudo ln -sf /opt/conf/rc.local /etc/rc.local) is not working
+  sudo cp -f /opt/conf/rc.local /etc/rc.local
 2. make sure rc.local is executable
   sudo chmod 755 /etc/rc.local
 3. reboot to take effect
