@@ -69,6 +69,11 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   shutdown -r now
 
 ********************************************************
+* disabel auto-mount u-disk devices
+  gsettings set org.gnome.desktop.media-handling automount false
+  gsettings set org.gnome.desktop.media-handling automount-open false
+
+********************************************************
 * install some key apps
   sudo apt install localepurge  //just keep EN and ZH
   sudo apt install exuberant-ctags
