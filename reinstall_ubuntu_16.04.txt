@@ -265,6 +265,7 @@ sudo apt install vmstat
 sudo apt install apvlv 
 sudo apt install zathura
 sudo apt install unity-tweak-tool
+sudo apt install powertop
 sudo apt install tlp tlp-rdw
 sudo apt install gparted 
 sudo apt install samba
