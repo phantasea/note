@@ -202,6 +202,7 @@ cfdisk  //fdisk TUI
 s-tui   //CPU monitor TUI
 
 ********************************************************
+sudo apt install p7zip-full    //7z x ****.7z
 sudo apt install ibus-pinyin 
 sudo apt install xfonts-wqy
 sudo apt install tree
