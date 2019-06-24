@@ -102,6 +102,10 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   ./configure --disable-desktop-files --without-gtk --without-X11 --without-dyn-X11
   make
   make install
+  
+* the below apps are suggested to install:
+  sudo apt install ffmpegthumbnailer
+  sudo apt install poppler-utils    //includes pdftoppm which can convert pdf to image 
 
 ********************************************************
 * SanDisk Extreme Portable SSD not detected
@@ -202,6 +206,9 @@ cfdisk  //fdisk TUI
 s-tui   //CPU monitor TUI
 
 ********************************************************
+sudo pip install --upgrade pip
+sudo apt install python3-pip
+sudo pip3 install ueberzug
 sudo apt install p7zip-full    //7z x ****.7z
 sudo apt install ibus-pinyin 
 sudo apt install xfonts-wqy
