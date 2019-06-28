@@ -146,7 +146,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo chmod go-rw /etc/moc/config
 
 ********************************************************
-* install fim under /opt/apps/fim
+* install fim under /opt/apps/fim-0.3
   sudo apt install bison
   sudo apt install libjpeg-dev 
   sudo apt install giflib-tools 
@@ -155,7 +155,28 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install libreadline-dev 
   sudo apt install libpoppler-dev 
   sudo apt install libspectre-dev 
+  sudo apt install libncurses5-dev
+  ./autogen.sh 
+  ./configure
   make
+  sudo make install
+
+********************************************************
+* install fim under /opt/apps/fim-0.6 which has X support 
+  (via the SDL and the Imlib2 libraries, but tested not working)
+  sudo apt install git-svn
+  sudo apt install subversion
+  git svn clone http://svn.savannah.nongnu.org/svn/fbi-improved/trunk fim-0.6
+  sudo apt install automake autoconf libtool pkg-config groff
+  sudo apt install libreadline-dev libexif-dev
+  sudo apt install libjpeg-dev libpng-dev libtiff-dev libgif-dev
+  sudo apt install libsdl1.2-dev libaa1-dev libimlib2-dev
+  sudo apt install libpoppler-dev libpoppler-private-dev libdjvulibre-dev libspectre-dev
+  sudo apt install libarchive-dev
+  ./autogen.sh 
+  ./configure --enable-poppler --enable-aa --enable-sdl
+  make
+  sudo make install
 
 ********************************************************
 * install pho under /opt/apps/pho
@@ -164,6 +185,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install libgtk2.0-dev
   sudo apt install libgnutls-dev 
   make
+  sudo make install
 
 ********************************************************
 * install w3m under /opt/apps/w3m
@@ -195,8 +217,8 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 ********************************************************
 * install sublime
   sudo add-apt-repository ppa:webupd8team/sublime-text-3
-  sudo apt-get update
-  sudo apt-get install sublime-text-installer
+  sudo apt update
+  sudo apt install sublime-text-installer
   subl 
   subl --version
 
