@@ -84,6 +84,10 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install fbterm
 
 ********************************************************
+* query the number of colors supported by the terminal with current setting
+  tput colors
+
+********************************************************
 * make fbterm to take effect so simone can access to the frame buffer device: /dev/fb0
   sudo usermod -aG video simone
   sudo chmod u+s /usr/bin/fbterm (sudo chmod u+s $(command -v fbterm)
