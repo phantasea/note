@@ -183,6 +183,16 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 ********************************************************
+* install jfbview
+  sudo apt-get install libssl-dev libopenjp2-7-dev libjbig2dec-dev libharfbuzz-dev libncurses5-dev libimlib2-dev libmupdf-dev
+  cd /opt/misc/mujs
+  make release
+  sudo make prefix=/usr/local install
+  cd /opt/apps/jfbview
+  make
+  sudo make install
+
+********************************************************
 * install pho under /opt/apps/pho
   sudo apt install libpng12-dev
   sudo apt install libgdk-pixbuf2.0-dev 
@@ -268,6 +278,7 @@ sudo apt install multitail
 sudo apt install lnav
 sudo apt install fbi
 sudo apt install fbcat  //fbgrab included
+sudo apt install mupdf
 sudo apt install expect
 sudo apt install docx2txt 
 sudo apt install antiword 
