@@ -244,7 +244,6 @@ s-tui   //CPU monitor TUI
 ********************************************************
 sudo pip install --upgrade pip
 sudo apt install python3-pip
-sudo pip3 install ueberzug
 sudo apt install p7zip-full    //7z x ****.7z
 sudo apt install ibus-pinyin 
 sudo apt install xfonts-wqy
@@ -255,6 +254,8 @@ sudo apt install acpi
 sudo apt install curl
 sudo apt install aria2
 sudo apt install iwatch
+sudo apt install at
+sudo apt install compton
 sudo apt install moreutils  //vidir included
 sudo apt install tty-clock
 sudo apt install neofetch  //unavailable for 16.04
