@@ -36,3 +36,9 @@ git rm --cached w3m/bookmark.html
 
 # get old version of a file
 git checkout <commitID> /path/to/file
+
+# undo the latest commit
+git reset --soft HEAD~1
+
+# undo the git add(unstage)
+git reset HEAD /path/to/file
