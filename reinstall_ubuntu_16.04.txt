@@ -26,6 +26,12 @@
 8. press Ctrl_Alt_F7 to switch back to GUI, now the simone can be used to log in
 
 ********************************************************
+* install vim8.1 for Ubunto 16.04
+  sudo add-apt-repository ppa:jonathonf/vim
+  sudo apt update
+  sudo apt install vim-gui-common
+
+********************************************************
 * keyboard mapping
 1. replace /etc/rc.local with /opt/conf/rc.local
   //symlink(sudo ln -sf /opt/conf/rc.local /etc/rc.local) is not working
@@ -265,6 +271,7 @@ sudo apt install lolcat
 sudo apt install fortune
 sudo apt install cowsay
 sudo apt install cmatrix
+sudo apt install realpath
 sudo apt install mediainfo
 sudo apt install mutt
 sudo apt install urlview
