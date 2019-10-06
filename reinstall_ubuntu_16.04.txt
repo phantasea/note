@@ -235,6 +235,35 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 ********************************************************
+* install i3-gaps
+  sudo apt install libxcb1-dev
+  sudo apt install libxcb-keysyms1-dev
+  sudo apt install libpango1.0-dev
+  sudo apt install libxcb-util0-dev
+  sudo apt install libxcb-icccm4-dev
+  sudo apt install libyajl-dev
+  sudo apt install libstartup-notification0-dev
+  sudo apt install libxcb-randr0-dev
+  sudo apt install libev-dev
+  sudo apt install libxcb-cursor-dev
+  sudo apt install libxcb-xinerama0-dev
+  sudo apt install libxcb-xkb-dev
+  sudo apt install libxkbcommon-dev
+  sudo apt install libxkbcommon-x11-dev
+  sudo apt install libxcb-xrm-dev
+  sudo add-apt-repository ppa:aguignard/ppa
+  sudo apt-get update
+  sudo apt install libxcb-xrm-dev
+
+  git clone https://github.com/Airblader/i3 i3-gaps
+  cd i3-gaps/
+  autoreconf --force --install
+  mkdir -p build && cd build/
+  ../configure --prefix=/usr/local --sysconfdir=/etc --disable-sanitizers
+  make
+  sudo make install
+
+********************************************************
 * install sublime
   sudo add-apt-repository ppa:webupd8team/sublime-text-3
   sudo apt update
