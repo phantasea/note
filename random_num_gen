@@ -1,0 +1,15 @@
+#1:
+    echo $RANDOM % 100 | bc
+
+#2:
+    echo $((RANDOM % 100))
+
+#3:
+    shuf -i0-100 -n1
+    shuf -i 0-100 -n 1
+
+#4:
+    seq 0 100 | sort -R | head -n1 
+
+#5: 
+    grep -m1 -ao '[0-9]' /dev/urandom | sed s/0/100/ | head -n1
