@@ -1,0 +1,5 @@
+GUI: 
+    notify-send
+
+CLI:
+    wall
