@@ -290,6 +290,8 @@ sudo apt install acpi
 sudo apt install curl
 sudo apt install aria2
 sudo apt install iwatch
+sudo apt install inotify-tools
+sudo apt install entr
 sudo apt install at
 sudo apt install compton
 sudo apt install moreutils  //vidir included
