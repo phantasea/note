@@ -88,6 +88,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install tig
   sudo apt install tmux
   sudo apt install fbterm
+  sudo dpkg -i /opt/misc/apps/fd_7.4.0_i386.deb
 
 ********************************************************
 * query the number of colors supported by the terminal with current setting
@@ -283,6 +284,7 @@ sudo apt install python3-pip
 sudo apt install p7zip-full    //7z x ****.7z
 sudo apt install ibus-pinyin 
 sudo apt install xfonts-wqy
+sudo apt install shellcheck
 sudo apt install tree
 sudo apt install htop
 sudo apt install glances
