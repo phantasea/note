@@ -190,6 +190,14 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 ********************************************************
+* install mpv
+  sudo apt install libgif-dev
+  sudo ln -s /usr/lib/i386-linux-gnu/libgif.so.7.0.0 /usr/lib/libungif.so
+  ./configure
+  make
+  sudo make install
+
+********************************************************
 * install jfbview
   sudo apt-get install libssl-dev libopenjp2-7-dev libjbig2dec-dev libharfbuzz-dev libncurses5-dev libimlib2-dev libmupdf-dev
   cd /opt/misc/mujs
