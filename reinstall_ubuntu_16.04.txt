@@ -199,7 +199,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 
 ********************************************************
 * install jfbview
-  sudo apt-get install libssl-dev libopenjp2-7-dev libjbig2dec-dev libharfbuzz-dev libncurses5-dev libimlib2-dev libmupdf-dev
+  sudo apt install libssl-dev libopenjp2-7-dev libjbig2dec-dev libharfbuzz-dev libncurses5-dev libimlib2-dev libmupdf-dev
   cd /opt/misc/mujs
   make release
   sudo make prefix=/usr/local install
@@ -261,7 +261,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install libxkbcommon-x11-dev
   sudo apt install libxcb-xrm-dev
   sudo add-apt-repository ppa:aguignard/ppa
-  sudo apt-get update
+  sudo apt update
   sudo apt install libxcb-xrm-dev
 
   git clone https://github.com/Airblader/i3 i3-gaps
@@ -281,9 +281,13 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   subl --version
 
 ********************************************************
-* apps that might be used but can't be install by apt
+* nice monitor apps
 cfdisk  //fdisk TUI
 s-tui   //CPU monitor TUI
+htop
+gtop    //need npm installed(sudo apt install npm)
+nmon
+glances
 
 ********************************************************
 sudo pip install --upgrade pip
