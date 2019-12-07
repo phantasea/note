@@ -296,6 +296,7 @@ sudo apt install python3-pip
 sudo apt install p7zip-full    //7z x ****.7z
 sudo apt install ibus-pinyin 
 sudo apt install xfonts-wqy
+sudo apt install fonts-powerline
 sudo apt install shellcheck
 sudo apt install tree
 sudo apt install htop
@@ -345,6 +346,7 @@ sudo apt install atool
 sudo apt install fuse-zip 
 sudo apt install sshfs
 sudo apt install curlftpfs 
+sudo apt install mpg321
 sudo apt install mpg123
 sudo apt install sdcv
 sudo apt install dict
@@ -371,5 +373,5 @@ sudo apt install samba
 sudo apt install python-samba 
 sudo apt install samba-libs 
 sudo apt install samba-dev 
-sudo apt install --reinstall ubuntu-desktop
+sudo apt install --reinstall ubuntu-desktop  //once desktop failed to login
 ********************************************************
