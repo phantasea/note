@@ -290,9 +290,10 @@ nmon
 glances
 
 ********************************************************
+pip3 install git+https://github.com/zdict/zdict.git
 sudo pip install --upgrade pip
 sudo pip install --upgrade youtube-dl
-sudo apt install python3-pip
+sudo apt install python3-pip   //sudo -H pip3 install ueberzug
 sudo apt install p7zip-full    //7z x ****.7z
 sudo apt install ibus-pinyin 
 sudo apt install xfonts-wqy
