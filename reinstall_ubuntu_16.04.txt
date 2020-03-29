@@ -294,6 +294,7 @@ glances
 
 ********************************************************
 pip3 install git+https://github.com/zdict/zdict.git
+sudo pip3 intall rtv
 sudo pip install --upgrade pip
 sudo pip install --upgrade youtube-dl
 sudo apt install python3-pip   //sudo -H pip3 install ueberzug
