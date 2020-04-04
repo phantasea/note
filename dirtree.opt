@@ -1,0 +1,70 @@
+.
+├── ./apps
+│   ├── ./apps/adbfs
+│   ├── ./apps/autojump
+│   ├── ./apps/cmus
+│   ├── ./apps/elinks
+│   ├── ./apps/fbv
+│   ├── ./apps/fim
+│   ├── ./apps/fim-0.6
+│   ├── ./apps/fzf
+│   ├── ./apps/.git
+│   ├── ./apps/htop
+│   ├── ./apps/jfbview
+│   ├── ./apps/moc
+│   ├── ./apps/myst
+│   ├── ./apps/pho
+│   ├── ./apps/ranger
+│   ├── ./apps/vifm
+│   ├── ./apps/vimiv
+│   └── ./apps/w3m
+├── ./auds
+├── ./.certs
+├── ./conf
+│   ├── ./conf/elinks
+│   ├── ./conf/feh
+│   ├── ./conf/git
+│   ├── ./conf/.git
+│   ├── ./conf/i3wm
+│   ├── ./conf/moc
+│   ├── ./conf/mplayer
+│   ├── ./conf/mpv
+│   ├── ./conf/mutt
+│   ├── ./conf/newsbeuter
+│   ├── ./conf/ranger
+│   ├── ./conf/task
+│   ├── ./conf/vifm
+│   ├── ./conf/vim
+│   ├── ./conf/vimb
+│   ├── ./conf/vimiv
+│   ├── ./conf/w3m
+│   ├── ./conf/wallpaper
+│   ├── ./conf/yong
+│   └── ./conf/zathura
+├── ./.logs
+├── ./lost+found
+├── ./.mail
+├── ./misc
+│   ├── ./misc/apps
+│   ├── ./misc/dicts
+│   ├── ./misc/docs
+│   ├── ./misc/fonts
+│   └── ./misc/.git
+├── ./net.downloadhelper.coapp
+│   ├── ./net.downloadhelper.coapp/bin
+│   └── ./net.downloadhelper.coapp/converter
+├── ./.porn
+│   ├── ./.porn/pics
+│   ├── ./.porn/porn -> /usr/local/porn
+│   ├── ./.porn/text
+│   └── ./.porn/vids
+├── ./.priv
+│   ├── ./.priv/ECRYPTFS_FNEK_ENCRYPTED.FWYWhNZsc7y6uUZmdTo.lrwwJq03mVmNxVLLEkRTyeMugr0b0P3oqBuqok--
+│   ├── ./.priv/ECRYPTFS_FNEK_ENCRYPTED.FWYWhNZsc7y6uUZmdTo.lrwwJq03mVmNxVLLMC3V1jPYPW2Xp67lAwJ78E--
+│   ├── ./.priv/ECRYPTFS_FNEK_ENCRYPTED.FWYWhNZsc7y6uUZmdTo.lrwwJq03mVmNxVLLU2EIFyZpJIwgzuJCu8dIzE--
+│   └── ./.priv/.git
+├── ./util
+│   └── ./util/.git
+└── ./vids
+
+67 directories
