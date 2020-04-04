@@ -239,7 +239,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 
 * install rar2fs
   cd /opt/apps/
-  git clone https://github.com/hasse69/rar2fs
+  git clone --depth=1 https://github.com/hasse69/rar2fs
   cd rar2fs/
   autoreconf -f -i
   ./configure --with-unrar=/opt/apps/unrar
@@ -247,7 +247,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 ********************************************************
-* install i3-gaps
+* install i3-gaps/dmenu
   sudo apt install libxcb1-dev
   sudo apt install libxcb-keysyms1-dev
   sudo apt install libpango1.0-dev
@@ -267,13 +267,17 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt update
   sudo apt install libxcb-xrm-dev
 
-  git clone https://github.com/Airblader/i3 i3-gaps
+  git clone --depth=1 https://github.com/Airblader/i3 i3-gaps
   cd i3-gaps/
   autoreconf --force --install
   mkdir -p build && cd build/
   ../configure --prefix=/usr/local --sysconfdir=/etc --disable-sanitizers
   make
   sudo make install
+
+  git clone --depth=1 https://git.suckless.org/dmenu
+  cd dmenu/
+  sudo make clean install
 
 ********************************************************
 * install sublime
@@ -293,6 +297,14 @@ nmon
 glances
 
 ********************************************************
+git clone --depth=1 vimiv
+git clone --depth=1 vimb
+git clone --depth=1 feh
+git clone --depth=1 pqiv
+git clone --depth=1 sxiv
+git clone --depth=1 nnn
+git clone --depth=1 cmus
+
 pip3 install git+https://github.com/zdict/zdict.git
 sudo pip3 intall rtv
 sudo pip install --upgrade pip
