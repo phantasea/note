@@ -86,8 +86,10 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install localepurge  //just keep EN and ZH
   sudo apt install exuberant-ctags
   sudo apt install ttf-wqy-zenhei
+  sudo apt install xfonts-wqy
+  sudo apt install fonts-powerline
   sudo apt install git
-  sudo apt install tig
+  sudo apt install tig    //another app is https://github.com/rgburke/grv
   sudo apt install tmux
   sudo apt install fbterm
   sudo dpkg -i /opt/misc/apps/fd_7.4.0_i386.deb
@@ -304,6 +306,10 @@ git clone --depth=1 pqiv
 git clone --depth=1 sxiv
 git clone --depth=1 nnn
 git clone --depth=1 cmus
+git clone --depth=1 visit1985/mdp    //tpp alternative
+
+sudo npm i -g cli-github    //need graphicsmagick installed
+sudo npm i -g gitmoji-cli
 
 pip3 install git+https://github.com/zdict/zdict.git
 sudo pip3 intall rtv
@@ -323,6 +329,7 @@ sudo apt install curl
 sudo apt install aria2
 sudo apt install iwatch
 sudo apt install inotify-tools
+sudo apt install graphicsmagick
 sudo apt install entr
 sudo apt install at
 sudo apt install compton
