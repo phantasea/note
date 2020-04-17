@@ -322,6 +322,7 @@ sudo apt install xfonts-wqy
 sudo apt install fonts-powerline
 sudo apt install shellcheck
 sudo apt install tree
+sudo apt install jq
 sudo apt install htop
 sudo apt install glances
 sudo apt install acpi
