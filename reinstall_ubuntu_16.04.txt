@@ -308,6 +308,9 @@ git clone --depth=1 nnn
 git clone --depth=1 cmus
 git clone --depth=1 visit1985/mdp    //tpp alternative
 
+https://github.com/phiresky/ripgrep-all
+https://github.com/oniony/TMSU
+
 sudo npm i -g cli-github    //need graphicsmagick installed
 sudo npm i -g gitmoji-cli
 
