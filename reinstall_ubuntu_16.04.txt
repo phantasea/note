@@ -91,8 +91,10 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install git
   sudo apt install tig    //another app is https://github.com/rgburke/grv
   sudo apt install tmux
+  sudo apt install xterm
   sudo apt install fbterm
-  sudo dpkg -i /opt/misc/apps/fd_7.4.0_i386.deb
+  sudo dpkg -i /opt/misc/apps/fd_x.x.x_i386.deb
+  sudo dpkg -i /opt/misc/apps/bat_x.x.x_i386.deb
 
 ********************************************************
 * query the number of colors supported by the terminal with current setting
@@ -203,7 +205,8 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 
 ********************************************************
 * install jfbview
-  sudo apt install libssl-dev libopenjp2-7-dev libjbig2dec-dev libharfbuzz-dev libncurses5-dev libimlib2-dev libmupdf-dev
+  sudo apt install libssl-dev libopenjp2-7-dev libjbig2dec-dev libharfbuzz-dev
+                   libncurses5-dev libimlib2-dev libmupdf-dev
   cd /opt/misc/mujs
   make release
   sudo make prefix=/usr/local install
@@ -298,6 +301,10 @@ gtop    //need npm installed(sudo apt install npm)
 nmon
 glances
 
+* some useful x-apps
+xprop xsel xset xcalc xeyes xev
+xkill xterm xvkbd xclock
+
 ********************************************************
 git clone --depth=1 vimiv
 git clone --depth=1 vimb
@@ -307,6 +314,7 @@ git clone --depth=1 sxiv
 git clone --depth=1 nnn
 git clone --depth=1 cmus
 git clone --depth=1 visit1985/mdp    //tpp alternative
+git clone --depth=1 streamlink/streamlink
 
 https://github.com/phiresky/ripgrep-all
 https://github.com/oniony/TMSU
@@ -362,6 +370,9 @@ sudo apt install lnav
 sudo apt install fbi
 sudo apt install fbcat  //fbgrab included
 sudo apt install mupdf
+sudo apt install mpd
+sudo apt install ncmpcpp
+sudo apt install rofi
 sudo apt install expect
 sudo apt install docx2txt 
 sudo apt install antiword 
