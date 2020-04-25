@@ -352,6 +352,7 @@ sudo apt install screenfetch
 sudo apt install lolcat
 sudo apt install fortune
 sudo apt install cowsay
+sudo apt install toilet
 sudo apt install cmatrix
 sudo apt install realpath
 sudo apt install mediainfo
@@ -370,8 +371,6 @@ sudo apt install lnav
 sudo apt install fbi
 sudo apt install fbcat  //fbgrab included
 sudo apt install mupdf
-sudo apt install mpd
-sudo apt install ncmpcpp
 sudo apt install rofi
 sudo apt install expect
 sudo apt install docx2txt 
@@ -387,6 +386,11 @@ sudo apt install sshfs
 sudo apt install curlftpfs 
 sudo apt install mpg321
 sudo apt install mpg123
+sudo apt install mplayer
+sudo apt install mpd
+sudo apt install mpc
+sudo apt install ncmpc
+sudo apt install ncmpcpp
 sudo apt install sdcv
 sudo apt install dict
 sudo apt install tpp 
