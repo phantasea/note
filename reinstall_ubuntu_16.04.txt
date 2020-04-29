@@ -228,6 +228,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 * install w3m under /opt/apps/w3m
   sudo apt install libssl-dev 
   sudo apt install libgc-dev 
+  sudo apt install surfraw
   ./configure 
   make
   sudo make install
