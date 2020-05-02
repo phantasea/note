@@ -83,6 +83,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 
 ********************************************************
 * install some key apps
+* install /opt/misc/apps/bash-4.4.tar.gz
   sudo apt install localepurge  //just keep EN and ZH
   sudo apt install exuberant-ctags
   sudo apt install ttf-wqy-zenhei
