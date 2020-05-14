@@ -317,6 +317,14 @@ git clone --depth=1 nnn
 git clone --depth=1 cmus
 git clone --depth=1 visit1985/mdp    //tpp alternative
 git clone --depth=1 streamlink/streamlink
+git clone --depth=1 andmarti1424/sc-im
+git clone --depth=1 okbob/pspg
+git clone --depth=1 neomutt/neomutt
+git clone --depth=1 neovim/neovim
+git clone --depth=1 irontec/sngrep
+git clone --depth=1 fulhax/ncpamixer
+git clone --depth=1 unoconv/unoconv
+git clone --depth=1 jesseduffield/lazygit
 
 https://github.com/phiresky/ripgrep-all
 https://github.com/oniony/TMSU
