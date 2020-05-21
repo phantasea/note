@@ -84,15 +84,18 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 ********************************************************
 * install some key apps
 * install /opt/misc/apps/bash-4.4.tar.gz
+* install /opt/misc/apps/xterm.tar.gz    (sudo apt install xterm)
   sudo apt install localepurge  //just keep EN and ZH
   sudo apt install exuberant-ctags
   sudo apt install ttf-wqy-zenhei
   sudo apt install xfonts-wqy
   sudo apt install fonts-powerline
+  sudo apt install fonts-mplus
+  sudo apt install fonts-noto
+  sudo apt install fonts-noto-cjk
   sudo apt install git
   sudo apt install tig    //another app is https://github.com/rgburke/grv
   sudo apt install tmux
-  sudo apt install xterm
   sudo apt install fbterm
   sudo dpkg -i /opt/misc/apps/fd_x.x.x_i386.deb
   sudo dpkg -i /opt/misc/apps/bat_x.x.x_i386.deb
@@ -339,8 +342,6 @@ sudo pip install --upgrade youtube-dl
 sudo apt install python3-pip   //sudo -H pip3 install ueberzug
 sudo apt install p7zip-full    //7z x ****.7z
 sudo apt install ibus-pinyin 
-sudo apt install xfonts-wqy
-sudo apt install fonts-powerline
 sudo apt install shellcheck
 sudo apt install tree
 sudo apt install jq
