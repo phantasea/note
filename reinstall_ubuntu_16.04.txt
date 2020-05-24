@@ -298,6 +298,22 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   subl --version
 
 ********************************************************
+* install syncthing
+  # Add the release PGP keys:
+  curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+  # Add the "stable" channel to your APT sources:
+  echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+  # Update and install syncthing:
+  sudo apt-get update
+  sudo apt-get install syncthing
+
+  # Enable and start the service:(1st should copy syncthing.service to ~/.config/systemd/user)
+  systemctl --user enable syncthing.service
+  systemctl --user start syncthing.service
+  # Check the status of syncthing service:
+  systemctl --user status syncthing.service
+
+********************************************************
 * nice monitor apps
 cfdisk  //fdisk TUI
 s-tui   //CPU monitor TUI
@@ -381,6 +397,7 @@ sudo apt install multitail
 sudo apt install lnav
 sudo apt install fbi
 sudo apt install fbcat  //fbgrab included
+sudo apt install fbset
 sudo apt install mupdf
 sudo apt install rofi
 sudo apt install expect
