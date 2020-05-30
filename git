@@ -37,6 +37,10 @@ git rm --cached w3m/bookmark.html
 # get old version of a file
 git checkout <commitID> /path/to/file
 
+# Rewriting the most recent commit message
+git commit --amend    (edit in text editor)
+git commit --amend -m "New and correct message"
+
 # undo the latest commit
 git reset --soft HEAD~1
 
