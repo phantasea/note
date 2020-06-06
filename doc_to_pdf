@@ -1,0 +1,5 @@
+abiword --to=pdf filename.doc
+
+unoconv -fpdf file1.doc
+
+lowriter --headless --convert-to pdf *.doc  //libreoffice
