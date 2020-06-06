@@ -238,6 +238,12 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 ********************************************************
+* install neofetch
+  sudo add-apt-repository ppa:dawidd0811/neofetch
+  sudo apt update
+  sudo apt install neofetch
+
+********************************************************
 * install unrar
   cd /opt/apps/
   wget ftp://ftp.rarlab.com/rar/unrarsrc-5.2.3.tar.gz
@@ -360,8 +366,9 @@ sudo apt install p7zip-full    //7z x ****.7z
 sudo apt install ibus-pinyin 
 sudo apt install shellcheck
 sudo apt install tree
-sudo apt install psmisc    //pstree
-sudo apt install procps    //pgrep, pkill
+sudo apt install psmisc        //pstree
+sudo apt install procps        //pgrep, pkill
+sudo apt install task-spooler  //tsp
 sudo apt install jq
 sudo apt install htop
 sudo apt install glances
@@ -376,7 +383,6 @@ sudo apt install at
 sudo apt install compton
 sudo apt install moreutils  //vidir included
 sudo apt install tty-clock
-sudo apt install neofetch  //unavailable for 16.04
 sudo apt install screenfetch
 sudo apt install lolcat
 sudo apt install fortune
