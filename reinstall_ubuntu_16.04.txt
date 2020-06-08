@@ -304,6 +304,30 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   subl --version
 
 ********************************************************
+* install sc-im
+  # Support csv/tsv/xls/xlsx
+
+  git clone --depth=1 andmarti1424/sc-im
+  cd sc-im
+  make -C src
+  sudo make -C src install
+
+********************************************************
+* install visidata
+  # Support csv, tsv, fixed-width text, json, sqlite, http, html, .xls, and .xlsx
+
+  # First, go to the above repository and download the deb file
+  https://www.visidata.org/install/#apt
+
+  # To install VisiData:
+  sudo dpkg -i /path/to/visidata_version_all.deb
+
+  # To uninstall VisiData:
+  sudo dpkg -r visidata
+
+  # Note that the VisiData.deb comes preloaded with additional dependencies such as python3-dateutil
+
+********************************************************
 * install syncthing
   # Add the release PGP keys:
   curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
@@ -342,7 +366,6 @@ git clone --depth=1 nnn
 git clone --depth=1 cmus
 git clone --depth=1 visit1985/mdp    //tpp alternative
 git clone --depth=1 streamlink/streamlink
-git clone --depth=1 andmarti1424/sc-im
 git clone --depth=1 okbob/pspg
 git clone --depth=1 neomutt/neomutt
 git clone --depth=1 neovim/neovim
