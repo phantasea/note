@@ -297,6 +297,12 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make clean install
 
 ********************************************************
+* install bashtop
+  sudo add-apt-repository ppa:bashtop-monitor/bashtop
+  sudo apt update
+  sudo apt install bashtop
+
+********************************************************
 * install sublime
   sudo add-apt-repository ppa:webupd8team/sublime-text-3
   sudo apt update
