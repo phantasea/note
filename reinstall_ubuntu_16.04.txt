@@ -100,6 +100,8 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install fbterm
   sudo dpkg -i /opt/misc/apps/fd_x.x.x_i386.deb
   sudo dpkg -i /opt/misc/apps/bat_x.x.x_i386.deb
+  sudo dpkg -i /opt/misc/apps/buku_x.x-x_all.deb (sudo apt install python3-cryptography)
+  asciinema
 
 ********************************************************
 * query the number of colors supported by the terminal with current setting
