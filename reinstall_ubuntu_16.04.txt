@@ -299,7 +299,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make clean install
 
 ********************************************************
-* install bashtop
+* install bashtop (not necessary now as it's in /opt/util)
   sudo add-apt-repository ppa:bashtop-monitor/bashtop
   sudo apt update
   sudo apt install bashtop
