@@ -463,6 +463,7 @@ sudo apt install ncmpcpp
 sudo apt install sdcv
 sudo apt install dict
 sudo apt install tpp 
+sudo apt install xlsx2csv
 sudo apt install taskwarrior
 sudo apt install calcurse
 sudo apt install ncftp 
