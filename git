@@ -51,6 +51,7 @@ git reset HEAD /path/to/file
 git reflog
 git reset --hard master@{"2 days ago"}
 git reset --hard xxxxxxx
+git reset --hard tagname
 
 # remove implicit submodule and add again
 git rm --cached path/to/submodule (no trailing slash)
