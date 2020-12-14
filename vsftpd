@@ -1,0 +1,9 @@
+Step#1:
+sudo vim /etc/vsftpd.conf   //change anonymous_enable=YES
+
+Step#2:
+systemctl restart vsftpd
+
+Step#3:
+scan and connect vsftpd by anonymous
+
