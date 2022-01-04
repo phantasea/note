@@ -155,6 +155,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install libogg-dev
   sudo apt install libvorbisfile3 
   sudo apt install libsidplay2-dev
+  sudo apt install libresid-builder-dev
   sudo apt install libsidutils-dev
   sudo apt install libspeex-dev 
   sudo apt install libwavpack-dev 
@@ -167,7 +168,8 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 * keep in mind to change moc config as mode: -rw------
-  sudo chmod go-rw /etc/moc/config
+  //sudo chmod go-rw /etc/moc/config
+  chmod go-rw ~/.moc/config
 
 ********************************************************
 * install fim under /opt/apps/fim-0.3
