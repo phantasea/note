@@ -3,3 +3,10 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
 
 #swap casps and escape:
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:swapescape']"
+
+
+#for ubuntu 20.04
+sudo vim /etc/default/keyboard
+  XKBOPTIONS="caps:swapescape"
+
+sudo setupcon

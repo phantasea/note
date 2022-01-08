@@ -1,2 +1,3 @@
-修改 .config/user-dirs.dirs
-把 XDG-DESKTOP-DIR to "$HOME/.Desktop" 
+mkdir ~/.Desktop  (if not existing)
+vim ~/.config/user-dirs.dirs
+set XDG-DESKTOP-DIR as "$HOME/.Desktop" 

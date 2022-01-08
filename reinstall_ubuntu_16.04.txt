@@ -115,6 +115,8 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 
 ********************************************************
 * install file manager vifm
+  sudo apt install automake-1.15
+  sudo apt install autoconf
   sudo apt install libncursesw5-dev
   sudo apt install sshfs
   sudo apt install curlftpfs
@@ -124,7 +126,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install fuseiso
   cd /opt/apps/vifm
   ./configure --disable-desktop-files --without-gtk --without-X11 --without-dyn-X11
-  make
+  make    (autoreconf --install --force)
   make install
   
 * the below apps are suggested to install:
@@ -164,6 +166,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install libltdl-dev 
   sudo apt install libasound2-dev
   sudo apt install libavcodec-dev
+  (./configure)
   make
   sudo make install
 
@@ -174,6 +177,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 ********************************************************
 * install fim under /opt/apps/fim-0.3
   sudo apt install bison
+  sudo apt install flex
   sudo apt install libjpeg-dev 
   sudo apt install giflib-tools 
   sudo apt install libpng12-dev
