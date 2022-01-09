@@ -1,0 +1,6 @@
+Solution#1
+sudo vim /sys/class/backlight/amdgpu_bl0/brightness
+  change the value to 18
+
+Solution#2
+echo 18 | sudo tee /sys/class/backlight/amdgpu_bl0/brightness
