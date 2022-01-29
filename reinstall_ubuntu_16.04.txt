@@ -170,6 +170,12 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   make
   sudo make install
 
+  //for Ubuntu 20.04
+  autoreconf -if
+  ./configure
+  make
+  sudo make install
+
 * keep in mind to change moc config as mode: -rw------
   //sudo chmod go-rw /etc/moc/config
   chmod go-rw ~/.moc/config
@@ -272,7 +278,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 ********************************************************
-* install i3-gaps/dmenu
+* install i3-gaps & dmenu
   sudo apt install libxcb1-dev
   sudo apt install libxcb-keysyms1-dev
   sudo apt install libpango1.0-dev
@@ -292,13 +298,17 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt update
   sudo apt install libxcb-xrm-dev
 
-  git clone --depth=1 https://github.com/Airblader/i3 i3-gaps
-  cd i3-gaps/
-  autoreconf --force --install
-  mkdir -p build && cd build/
-  ../configure --prefix=/usr/local --sysconfdir=/etc --disable-sanitizers
-  make
-  sudo make install
+  sudo add-apt-repository ppa:regolith-linux/release
+  sudo apt update
+  sudo apt install i3-gaps
+
+  #git clone --depth=1 https://github.com/Airblader/i3 i3-gaps
+  #cd i3-gaps/
+  #autoreconf --force --install
+  #mkdir -p build && cd build/
+  #../configure --prefix=/usr/local --sysconfdir=/etc --disable-sanitizers
+  #make
+  #sudo make install
 
   git clone --depth=1 https://git.suckless.org/dmenu
   cd dmenu/
