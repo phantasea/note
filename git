@@ -34,12 +34,20 @@ git push origin v-sim1.0
 # git rm but keep file in disk
 git rm --cached w3m/bookmark.html
 
+# ! [rejected] master -> master (non-fast-forward)
+# error: failed to push some refs to
+git push -u origin master --force
+
 # get old version of a file
 git checkout <commitID> /path/to/file
 
 # Rewriting the most recent commit message
 git commit --amend    (edit in text editor)
 git commit --amend -m "New and correct message"
+
+# pull/bring all changes up to <commit-id> to branch master
+git checkout master    //skip if current branch is master
+git merge <commit-id>
 
 # undo the latest commit
 git reset --soft HEAD~1
@@ -52,6 +60,9 @@ git reflog
 git reset --hard master@{"2 days ago"}
 git reset --hard xxxxxxx
 git reset --hard tagname
+
+# git pull/checkout the specific commit of given date&time
+git checkout 'master@{2018-09-01 01:00:00}'
 
 # remove implicit submodule and add again
 git rm --cached path/to/submodule (no trailing slash)
