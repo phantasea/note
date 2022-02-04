@@ -1,0 +1,28 @@
+#webcam: 
+cheese(X), streamer, camshot(console), fswebcam(console), qv4l2
+
+#Using streamer:
+streamer -f jpeg -o image.jpeg
+
+#Using avconv or ffmpeg
+avconv -f video4linux2 -s 640x480 -i /dev/video0 -ss 0:0:2 -frames 1 /tmp/out.jpg
+ffmpeg -f video4linux2 -s 640x480 -i /dev/video0 -ss 0:0:2 -frames 1 /tmp/out.jpg
+
+This will open /dev/video0 as a video4linux2 compatible device, set up resolution to 640x480, 
+stream for 2 seconds (00:00:02 or simply 2), then capture one single frame, 
+saving it to /tmp/out.jpg. Check if your device is /dev/video0, as it can be different for you.
+
+The available resolutions depend on your webcam. Mine goes up to 640x480 and I checked it 
+with a tool called qv4l2, which is used to configure a video4linux2 device.
+The -ss parameter is used to allow the device to start up correctly. Here in the tests, 
+there is a fade-in effect while the camera is being turned on, so, if I just omit -ss 2, 
+the captured frame will be very dark.
+
+
+#Creating pictures from WebCamera using mplayer
+mplayer -vo png -frames 1 tv://
+
+There is possibility to pass output webcam picture (resolution) dimensions too:
+mplayer tv:// -tv driver=v4l:device=/dev/video0:width=320:height=240:outfmt=rgb24 -frames 1 -vo jpeg
+
+
