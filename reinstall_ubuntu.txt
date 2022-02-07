@@ -108,6 +108,16 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   tput colors
 
 ********************************************************
+* make xbacklight to work out in i3.conf
+  #git clone --depth=1 https://gitlab.com/wavexx/acpilight
+  #cd acpilight
+  cd /opt/misc/apps/acpilight
+  sudo make install
+
+  xbacklight +1
+  xbacklight -1
+
+********************************************************
 * make fbterm to take effect so simone can access to the frame buffer device: /dev/fb0
   sudo usermod -aG video simone
   sudo chmod u+s /usr/bin/fbterm (sudo chmod u+s $(command -v fbterm)
