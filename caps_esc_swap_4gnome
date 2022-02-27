@@ -6,7 +6,9 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:swapescape']"
 
 
 #for ubuntu 20.04
+# swap caps and esc
+# make the LWIN working as CTRL
 sudo vim /etc/default/keyboard
-  XKBOPTIONS="caps:swapescape"
+  XKBOPTIONS="caps:swapescape,altwin:ctrl_win"
 
 sudo setupcon
