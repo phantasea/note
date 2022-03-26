@@ -390,7 +390,7 @@ glances
 
 * some useful x-apps
 xprop xsel xset xcalc xeyes xev
-xkill xterm xvkbd xclock
+xkill xterm xvkbd xclock xbacklight
 
 ********************************************************
 git clone --depth=1 vimiv
@@ -505,6 +505,7 @@ sudo apt install mtr
 sudo apt install dstat
 sudo apt install vnstat
 sudo apt install vmstat
+sudo apt install sngrep
 sudo apt install apvlv 
 sudo apt install zathura
 sudo apt install unity-tweak-tool
