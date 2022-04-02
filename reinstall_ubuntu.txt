@@ -104,6 +104,8 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo dpkg -i /opt/misc/apps/buku_x.x-x_all.deb (sudo apt install python3-cryptography)
   asciinema
 
+  sogoupinyin_4.0.0.1605_amd64.deb  //sogou.com
+
 ********************************************************
 * query the number of colors supported by the terminal with current setting
   tput colors
