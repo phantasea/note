@@ -395,6 +395,20 @@ xprop xsel xset xcalc xeyes xev
 xkill xterm xvkbd xclock xbacklight
 
 ********************************************************
+* install vimb on Ubuntu 20.04
+1. add below line in /etc/apt/sources.list:
+deb http://archive.ubuntu.com/ubuntu focal-updates main
+
+2. install webkit2gtk-4.0:
+sudo apt -f install libwebkit2gtk-4.0-dev
+
+3. install vimb:
+cd vimb
+make
+sudo make install
+
+
+********************************************************
 git clone --depth=1 vimiv
 git clone --depth=1 vimb
 git clone --depth=1 feh
