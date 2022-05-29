@@ -1,0 +1,4 @@
+cat *.html > output.html
+
+#not working well for the format
+pandoc -s *.html -o output.html
