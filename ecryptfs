@@ -1,0 +1,15 @@
+# install ecryptfs:
+sudo apt-get install ecryptfs-utils
+
+# create an empty directories:
+cd /usr/local/.porn
+mkdir auds
+
+# mount the ecryptfs on "auds" directory:
+sudo mount -t ecryptfs auds auds
+
+# now there is no any files in "auds" directory,
+# and put the wanted files into "auds" directory
+
+# unmount the "auds" directory, we will see only the encrypted files
+sudo umount auds

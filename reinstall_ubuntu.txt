@@ -146,6 +146,10 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install ffmpegthumbnailer
   sudo apt install poppler-utils    //includes pdftoppm which can convert pdf to image 
 
+  sudo rm /etc/apt/preferences.d/pin-zathura
+  sudo add-apt-repository ppa:spvkgn/zathura-mupdf
+  sudo apt-get install zathura zathura-pdf-mupdf
+
 ********************************************************
 * SanDisk Extreme Portable SSD not detected
   sudo apt install exfat-fuse
@@ -345,10 +349,10 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 * install sc-im
   # Support csv/tsv/xls/xlsx
 
-  git clone --depth=1 andmarti1424/sc-im
-  cd sc-im
-  make -C src
-  sudo make -C src install
+  git clone --depth=1 https://github.com/andmarti1424/sc-im
+  cd sc-im/src
+  make
+  sudo make install
 
 ********************************************************
 * install visidata
