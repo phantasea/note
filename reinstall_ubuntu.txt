@@ -120,6 +120,18 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   xbacklight +1
   xbacklight -1
 
+* disable dimming when power cable plugin/unplugin:
+  Using the GUI:
+    Open "System Settings"
+    Under "Personal", click on "Brightness & Lock"
+    To disable dimming, under "Brightness", untick "Dim screen to save power"
+    To re-enable dimming, under "Brightness", tick "Dim screen to save power"
+  Using the command line (or use dconf-editor):
+    To disable dimming run:
+      gsettings set org.gnome.settings-daemon.plugins.power idle-dim true
+    To re-enable dimming run:
+      gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+
 ********************************************************
 * make fbterm to take effect so simone can access to the frame buffer device: /dev/fb0
   sudo usermod -aG video simone
@@ -330,6 +342,14 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   git clone --depth=1 https://git.suckless.org/dmenu
   cd dmenu/
   sudo make clean install
+
+  #Python script using i3ipc to connect to i3wm: on window close,
+  #if the current workspace is empty, move to the first previous non-empty workspace
+  #i3-switch-if-workspace-empty is in /opt/util/misc
+  Install i3ipc-python:   pip3 install i3ipc
+  Add to your i3 config:  exec_always i3-switch-if-workspace-empty
+  Reload i3
+
 
 ********************************************************
 * install bashtop (not necessary now as it's in /opt/util)
