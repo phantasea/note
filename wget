@@ -1,3 +1,20 @@
+#!/bin/bash
+
+#for i in {00..29}
+for i in $(seq -w 315 746)
+do
+    wget -q --no-use-server-timestamps \
+        "http://aastory.space/read-178$i.html" \
+        --referer="http://aastory.space/"
+done
+
+exit 0
+
+for i in $(seq -w 000 015)
+do
+    wget -q --no-use-server-timestamps \
+        "https://img.xsnvshen.com/album/16293/19170/$i.jpg" \
+        --referer="https://img.xsnvshen.com/album/16293/19170/"
+done
+
 wget -c -A jpg -p -k -H -P ./download http://47ququ.com/tupianqu/taotu/52678.html
-
-
