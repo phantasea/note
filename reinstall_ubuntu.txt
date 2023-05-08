@@ -98,7 +98,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install python-dev python-pip python3-dev python3-pip python3-dateutil
   sudo apt install git
   sudo apt install tig    //another app is https://github.com/rgburke/grv
-  sudo apt install tmux
+  sudo apt install tmux   /opt/util/bins/tmux-->/opt/misc/appimg/tmux.appimage(v3.0a)
   sudo apt install fbterm
   sudo dpkg -i /opt/misc/apps/fd_x.x.x_i386.deb
   sudo dpkg -i /opt/misc/apps/bat_x.x.x_i386.deb
@@ -469,6 +469,7 @@ https://github.com/oniony/TMSU
 sudo npm i -g cli-github    //need graphicsmagick installed
 sudo npm i -g gitmoji-cli
 
+pip3 install git+https://github.com/wustho/epy
 pip3 install git+https://github.com/zdict/zdict.git
 sudo pip3 intall rtv
 sudo pip install --upgrade pip
@@ -482,6 +483,7 @@ sudo apt install psmisc        //pstree
 sudo apt install procps        //pgrep, pkill
 sudo apt install task-spooler  //tsp
 sudo apt install jq
+sudo apt install volumeicon-alsa  //i3.config volumeicon
 sudo apt install htop
 sudo apt install glances
 sudo apt install acpi
