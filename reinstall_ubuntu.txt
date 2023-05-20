@@ -444,6 +444,15 @@ cd vimb
 make
 sudo make install
 
+********************************************************
+install tencent WEIXIN
+* create "weixin.list" file with the below deb line:
+sudo vi /etc/apt/sources.list.d/weixin.list
+deb http://archive.ubuntukylin.com/ubuntukylin focal-partner main
+
+* update apt and install WEIXIN:
+sudo apt update
+sudo apt install weixin
 
 ********************************************************
 git clone --depth=1 vimiv
@@ -484,6 +493,7 @@ sudo apt install procps        //pgrep, pkill
 sudo apt install task-spooler  //tsp
 sudo apt install jq
 sudo apt install volumeicon-alsa  //i3.config volumeicon
+sudo apt install xautolock
 sudo apt install htop
 sudo apt install glances
 sudo apt install acpi
@@ -510,6 +520,7 @@ sudo apt install realpath
 sudo apt install mediainfo
 sudo apt install mutt
 sudo apt install urlview
+sudo apt install urlscan
 sudo apt install msmtp
 sudo apt install procmail
 sudo apt install fetchmail
@@ -545,6 +556,7 @@ sudo apt install mpc
 sudo apt install ncmpc
 sudo apt install ncmpcpp
 sudo apt install sdcv
+sudo apt install translate-shell
 sudo apt install dict
 sudo apt install tpp 
 sudo apt install xlsx2csv
