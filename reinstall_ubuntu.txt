@@ -26,10 +26,10 @@
 8. press Ctrl_Alt_F7 to switch back to GUI, now the simone can be used to log in
 
 ********************************************************
-* install vim8.1 for Ubunto 16.04
+* install latest vim for Ubuntu
   sudo add-apt-repository ppa:jonathonf/vim
   sudo apt update
-  sudo apt install vim-gui-common
+  sudo apt install vim
 
 ********************************************************
 * keyboard mapping
