@@ -62,6 +62,15 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   //if something was removed unexpected
   sudo apt install --fix-policy/--fix-missing/--fix-broken
 
+* install libc6_2.35 on Ubuntu 20.04
+  Add a line to your /etc/apt/sources.list like this:
+  //in Europe
+  deb http://cz.archive.ubuntu.com/ubuntu jammy main
+  //in Asia
+  deb http://kr.archive.ubuntu.com/ubuntu jammy main
+  sudo apt update
+  sudo apt install libc6  (needed for delta)
+
 ********************************************************
 * set to startup to console instead of GUI
 1. edit /etc/default/grub to have the boot in text mode with below parameters
@@ -317,37 +326,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 ********************************************************
-* install i3-gaps & dmenu
-  sudo apt install libxcb1-dev
-  sudo apt install libxcb-keysyms1-dev
-  sudo apt install libpango1.0-dev
-  sudo apt install libxcb-util0-dev
-  sudo apt install libxcb-icccm4-dev
-  sudo apt install libyajl-dev
-  sudo apt install libstartup-notification0-dev
-  sudo apt install libxcb-randr0-dev
-  sudo apt install libev-dev
-  sudo apt install libxcb-cursor-dev
-  sudo apt install libxcb-xinerama0-dev
-  sudo apt install libxcb-xkb-dev
-  sudo apt install libxkbcommon-dev
-  sudo apt install libxkbcommon-x11-dev
-  sudo apt install libxcb-xrm-dev
-  sudo add-apt-repository ppa:aguignard/ppa
-  sudo apt update
-  sudo apt install libxcb-xrm-dev
-
-  sudo add-apt-repository ppa:regolith-linux/release
-  sudo apt update
-  sudo apt install i3-gaps
-
-  #git clone --depth=1 https://github.com/Airblader/i3 i3-gaps
-  #cd i3-gaps/
-  #autoreconf --force --install
-  #mkdir -p build && cd build/
-  #../configure --prefix=/usr/local --sysconfdir=/etc --disable-sanitizers
-  #make
-  #sudo make install
+* install i3 & dmenu
 
   git clone --depth=1 https://git.suckless.org/dmenu
   cd dmenu/
@@ -363,12 +342,26 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   Add to your i3 config:  exec_always i3-switch-if-workspace-empty
   Reload i3
 
-
 ********************************************************
 * install bashtop (not necessary now as it's in /opt/util)
   sudo add-apt-repository ppa:bashtop-monitor/bashtop
   sudo apt update
   sudo apt install bashtop
+
+********************************************************
+* install shell gpt
+  https://github.com/TheR1D/shell_gpt
+  pip3 install shell-gpt==0.9.1
+
+  https://github.com/mattvr/ShellGPT
+  deno run -rA https://deno.land/x/shellgpt/install.ts
+
+
+********************************************************
+* install cava -- Audio Visualizer 
+  sudo add-apt-repository ppa:hsheth2/ppa
+  sudo apt update
+  sudo apt install cava
 
 ********************************************************
 * install sublime
