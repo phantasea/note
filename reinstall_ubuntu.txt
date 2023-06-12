@@ -73,10 +73,11 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 
 ********************************************************
 * set to startup to console instead of GUI
-1. edit /etc/default/grub to have the boot in text mode with below parameters
+1. edit /etc/default/grub as below
+  #GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
   GRUB_CMDLINE_LINUX_DEFAULT='text"
   GRUB_TERMINAL=console
-  ### /boot/grub/grub.cfg --- boot menu file
+  ## /boot/grub/grub.cfg -- changing this boot menu file is not working in 20.04 and unnecessary
 2. save the changes and exit vim
 3. update grub
   sudo update-grub
@@ -301,7 +302,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 ********************************************************
-* install neofetch
+* install neofetch (ppa is only for Ubuntu 18.04)
   sudo add-apt-repository ppa:dawidd0811/neofetch
   sudo apt update
   sudo apt install neofetch
@@ -473,6 +474,7 @@ sudo npm i -g gitmoji-cli
 
 pip3 install git+https://github.com/wustho/epy
 pip3 install git+https://github.com/zdict/zdict.git
+pip3 install tldr
 sudo pip3 intall rtv
 sudo pip install --upgrade pip
 sudo pip install --upgrade youtube-dl
