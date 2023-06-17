@@ -32,6 +32,12 @@
   sudo apt install vim
 
 ********************************************************
+* install powerline
+  refer the webpage in ~/docs/webs:
+  https://powerline.readthedocs.io/en/latest/installation.html
+  https://gist.github.com/Tset-Noitamotua/1fd436011ff91b5336ce34b783902fbd
+
+********************************************************
 * keyboard mapping
 1. replace /etc/rc.local with /opt/conf/rc.local
   //symlink(sudo ln -sf /opt/conf/rc.local /etc/rc.local) is not working
@@ -75,7 +81,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 * set to startup to console instead of GUI
 1. edit /etc/default/grub as below
   #GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-  GRUB_CMDLINE_LINUX_DEFAULT='text"
+  GRUB_CMDLINE_LINUX_DEFAULT="text"
   GRUB_TERMINAL=console
   ## /boot/grub/grub.cfg -- changing this boot menu file is not working in 20.04 and unnecessary
 2. save the changes and exit vim
@@ -437,6 +443,22 @@ sudo apt -f install libwebkit2gtk-4.0-dev
 cd vimb
 make
 sudo make install
+
+********************************************************
+* firefox addon/extention
+  AdBlocker Ultimate
+  Flash Block (Plus)
+  NoScript
+  Tridactyl
+  Video DownloadHelper
+  Dictionary Anywhere (disabled)
+  Double-click Image Downloader (disabled)
+  EPUBReader (disabled)
+  File Converter - By Online-Convert.com (disabled)
+  Imageye - Image downloader (disabled)
+  Immersive Translate (disabled)
+  Search by Image (disabled)
+  Midnight Lizard (disabled)
 
 ********************************************************
 install tencent WEIXIN
