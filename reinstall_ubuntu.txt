@@ -98,6 +98,15 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   gsettings set org.gnome.desktop.media-handling automount false
   gsettings set org.gnome.desktop.media-handling automount-open false
 
+
+********************************************************
+* install latest tmux
+  git clone https://github.com/tmux/tmux.git /opt/apps/tmux
+  cd tmux
+  sh autogen.sh
+  ./configure && make
+
+
 ********************************************************
 * install some key apps
 * install /opt/misc/apps/bash-4.4.tar.gz

@@ -49,6 +49,10 @@ git commit --amend -m "New and correct message"
 git checkout master    //skip if current branch is master
 git merge <commit-id>
 
+# undo the latest git add into staged
+git reset
+git restore .
+
 # undo the latest commit
 git reset --soft HEAD~1
 
@@ -60,6 +64,12 @@ git reflog
 git reset --hard master@{"2 days ago"}
 git reset --hard xxxxxxx
 git reset --hard tagname
+
+# git merge specific commit
+git fetch origin
+git merge <full-commit-id>   //all ancester commits before <full-commit-id> will be merged
+git cherry-pick <short-commit-id>
+git cherry-pick ID_A^..ID_B  //merge commits from ID_A(including) to ID_B
 
 # git pull/checkout the specific commit of given date&time
 git checkout 'master@{2018-09-01 01:00:00}'
