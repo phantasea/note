@@ -68,15 +68,6 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   //if something was removed unexpected
   sudo apt install --fix-policy/--fix-missing/--fix-broken
 
-* install libc6_2.35 on Ubuntu 20.04
-  Add a line to your /etc/apt/sources.list like this:
-  //in Europe
-  deb http://cz.archive.ubuntu.com/ubuntu jammy main
-  //in Asia
-  deb http://kr.archive.ubuntu.com/ubuntu jammy main
-  sudo apt update
-  sudo apt install libc6  (needed for delta)
-
 ********************************************************
 * set to startup to console instead of GUI
 1. edit /etc/default/grub as below
@@ -94,10 +85,17 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   shutdown -r now
 
 ********************************************************
-* disabel auto-mount u-disk devices
-  gsettings set org.gnome.desktop.media-handling automount false
-  gsettings set org.gnome.desktop.media-handling automount-open false
+  sudo apt install fbterm
+* make fbterm to take effect so simone can access to the frame buffer device: /dev/fb0
+  sudo usermod -aG video simone
+  sudo chmod u+s /usr/bin/fbterm (sudo chmod u+s $(command -v fbterm)
+  sudo setcap 'cap_sys_tty_config+ep' /usr/bin/fbterm
 
+********************************************************
+* install fbv
+  cd /opt/apps/fbv
+  //make
+  sudo make install
 
 ********************************************************
 * install latest tmux
@@ -106,10 +104,9 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sh autogen.sh
   ./configure && make
 
-
 ********************************************************
 * install some key apps
-* install /opt/misc/apps/bash-4.4.tar.gz
+* install /opt/misc/apps/bash-4.4.tar.gz (only in Ubuntu 18.04)
 * install /opt/misc/apps/xterm.tar.gz    (sudo apt install xterm)
   sudo apt install localepurge  //just keep EN and ZH
   sudo apt install lightdm      //during installing one can set the default DM
@@ -124,13 +121,16 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install git
   sudo apt install tig    //another app is https://github.com/rgburke/grv
   sudo apt install tmux   /opt/util/bins/tmux-->/opt/misc/appimg/tmux.appimage(v3.0a)
-  sudo apt install fbterm
   sudo dpkg -i /opt/misc/apps/fd_x.x.x_i386.deb
-  sudo dpkg -i /opt/misc/apps/bat_x.x.x_i386.deb
+  sudo dpkg -i /opt/misc/apps/bat_x.x.x_i386.deb (20.04: sudo apt install bat)
   sudo dpkg -i /opt/misc/apps/buku_x.x-x_all.deb (sudo apt install python3-cryptography)
-  asciinema
 
   sogoupinyin_4.0.0.1605_amd64.deb  //sogou.com
+
+********************************************************
+* disabel auto-mount u-disk devices
+  gsettings set org.gnome.desktop.media-handling automount false
+  gsettings set org.gnome.desktop.media-handling automount-open false
 
 ********************************************************
 * query the number of colors supported by the terminal with current setting
@@ -157,12 +157,6 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
       gsettings set org.gnome.settings-daemon.plugins.power idle-dim true
     To re-enable dimming run:
       gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
-
-********************************************************
-* make fbterm to take effect so simone can access to the frame buffer device: /dev/fb0
-  sudo usermod -aG video simone
-  sudo chmod u+s /usr/bin/fbterm (sudo chmod u+s $(command -v fbterm)
-  sudo setcap 'cap_sys_tty_config+ep' /usr/bin/fbterm
 
 ********************************************************
 * install file manager vifm
@@ -212,23 +206,15 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install ffmpeg
   sudo apt install moc-ffmpeg-plugin 
   sudo apt install python-mutagen
-  sudo apt install libdb-dev
-  sudo apt install libfaad-dev
-  sudo apt install libid3tag0
-  sudo apt install libflac-dev
-  sudo apt install libvorbis-dev
-  sudo apt install libogg-dev
   sudo apt install libvorbisfile3 
   sudo apt install libsidplay2-dev
   sudo apt install libresid-builder-dev
   sudo apt install libsidutils-dev
   sudo apt install libspeex-dev 
   sudo apt install libwavpack-dev 
-  sudo apt install libid3tag0-dev 
   sudo apt install libmad0-dev 
   sudo apt install libltdl-dev 
-  sudo apt install libasound2-dev
-  sudo apt install libavcodec-dev
+  //for Ubuntu 18.04
   (./configure)
   make
   sudo make install
@@ -279,7 +265,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 ********************************************************
-* install mpv
+* install mpv  (sudo apt install mpv)
   sudo apt install libgif-dev
   sudo ln -s /usr/lib/i386-linux-gnu/libgif.so.7.0.0 /usr/lib/libungif.so
   ./configure
@@ -323,7 +309,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install neofetch
 
 ********************************************************
-* install unrar
+* install unrar  (sudo apt install unrar)
   cd /opt/apps/
   wget ftp://ftp.rarlab.com/rar/unrarsrc-5.2.3.tar.gz
   mv ~/unrarsrc-5.2.3.tar.gz ./
@@ -506,7 +492,7 @@ sudo npm i -g gitmoji-cli
 pip3 install git+https://github.com/wustho/epy
 pip3 install git+https://github.com/zdict/zdict.git
 pip3 install tldr
-sudo pip3 intall rtv
+pip3 install rtv
 sudo pip install --upgrade pip
 sudo pip install --upgrade youtube-dl
 sudo apt install python3-pip   //sudo -H pip3 install ueberzug
@@ -532,6 +518,7 @@ sudo apt install inotify-tools
 sudo apt install graphicsmagick
 sudo apt install entr
 sudo apt install at
+sudo apt install memstat
 sudo apt install compton
 sudo apt install moreutils  //vidir included
 sudo apt install tty-clock
