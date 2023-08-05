@@ -98,11 +98,28 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 ********************************************************
+* install neofetch (ppa is only for Ubuntu 18.04)
+  #sudo add-apt-repository ppa:dawidd0811/neofetch
+  #sudo apt update
+  sudo apt install neofetch
+
+********************************************************
 * install latest tmux
+  #sudo apt install tmux  /opt/util/bins/tmux-->/opt/misc/appimg/tmux.appimage(v3.0a)
   git clone https://github.com/tmux/tmux.git /opt/apps/tmux
   cd tmux
   sh autogen.sh
   ./configure && make
+
+  sudo apt install vlock
+  sudo apt install tty-clock
+  sudo apt install screenfetch
+  sudo apt install acpi
+  sudo apt install lm-sensors
+  sudo apt install cmatrix
+  sudo apt install fbi
+  sudo apt install fbcat  //fbgrab included
+  sudo apt install fbset
 
 ********************************************************
 * install some key apps
@@ -120,7 +137,6 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install python-dev python-pip python3-dev python3-pip python3-dateutil
   sudo apt install git
   sudo apt install tig    //another app is https://github.com/rgburke/grv
-  sudo apt install tmux   /opt/util/bins/tmux-->/opt/misc/appimg/tmux.appimage(v3.0a)
   sudo dpkg -i /opt/misc/apps/fd_x.x.x_i386.deb
   sudo dpkg -i /opt/misc/apps/bat_x.x.x_i386.deb (20.04: sudo apt install bat)
   sudo dpkg -i /opt/misc/apps/buku_x.x-x_all.deb (sudo apt install python3-cryptography)
@@ -303,12 +319,6 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 ********************************************************
-* install neofetch (ppa is only for Ubuntu 18.04)
-  sudo add-apt-repository ppa:dawidd0811/neofetch
-  sudo apt update
-  sudo apt install neofetch
-
-********************************************************
 * install unrar  (sudo apt install unrar)
   cd /opt/apps/
   wget ftp://ftp.rarlab.com/rar/unrarsrc-5.2.3.tar.gz
@@ -330,9 +340,18 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 ********************************************************
 * install i3 & dmenu
 
-  git clone --depth=1 https://git.suckless.org/dmenu
-  cd dmenu/
-  sudo make clean install
+  #git clone --depth=1 https://git.suckless.org/dmenu
+  #cd dmenu/
+  #sudo make clean install
+
+  sudo apt install rofi
+  sudo apt install dmenu
+  sudo apt install compton
+  sudo apt install i3blocks
+  sudo apt install xautolock
+  sudo apt install volumeicon-alsa
+  sudo apt install inotify-tools
+  sudo apt install at
  
   !!! install the latest i3wm guide:
   https://i3wm.org/docs/repositories.html
@@ -343,6 +362,11 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   Install i3ipc-python:   pip3 install i3ipc
   Add to your i3 config:  exec_always i3-switch-if-workspace-empty
   Reload i3
+
+  #libinput: Fix your Linux touchpad using libinput
+  sudo apt install xserver-xorg-input-synaptics
+  sudo apt install xserver-xorg-input-libinput
+  sudo systemctl restart lightdm.service
 
 ********************************************************
 * install bashtop (not necessary now as it's in /opt/util)
@@ -504,31 +528,21 @@ sudo apt install psmisc        //pstree
 sudo apt install procps        //pgrep, pkill
 sudo apt install task-spooler  //tsp
 sudo apt install jq
-sudo apt install volumeicon-alsa  //i3.config volumeicon
-sudo apt install xautolock
 sudo apt install htop
 sudo apt install glances
-sudo apt install acpi
-sudo apt install lm-sensors
 sudo apt install hddtemp
 sudo apt install curl
 sudo apt install aria2
 sudo apt install iwatch
-sudo apt install inotify-tools
 sudo apt install graphicsmagick
 sudo apt install entr
-sudo apt install at
 sudo apt install memstat
-sudo apt install compton
 sudo apt install moreutils  //vidir included
-sudo apt install tty-clock
-sudo apt install screenfetch
 sudo apt install lolcat
 sudo apt install fortune
 sudo apt install cowsay
 sudo apt install toilet
 sudo apt install figlet
-sudo apt install cmatrix
 sudo apt install realpath
 sudo apt install mediainfo
 sudo apt install mutt
@@ -544,11 +558,7 @@ sudo apt install libgif-dev
 sudo apt install libfuse-dev 
 sudo apt install multitail 
 sudo apt install lnav
-sudo apt install fbi
-sudo apt install fbcat  //fbgrab included
-sudo apt install fbset
 sudo apt install mupdf
-sudo apt install rofi
 sudo apt install expect
 sudo apt install docx2txt 
 sudo apt install antiword 
