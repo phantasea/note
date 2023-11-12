@@ -1,0 +1,16 @@
+//merge multiple epub files into one (with -k we can unmerge it into multiple files)
+epubmerge -k -c cover.jpg -o output.epub input_1.epub input_2.epub
+
+//unmerge one epub file(it's merged before from multiple files)
+epubmerge -u source.epub
+
+
+//sudo apt install calibre
+ebook-convert src.txt dst.epub --no-default-epub-cover
+ebook-convert src.txt dst.epub --cover img_file_path.jpg
+
+//not working
+txt2epub --keep-line-breaks output.epub input.txt
+
+//not working
+txt2ebook -f epub input.txt

@@ -201,6 +201,11 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install suckless-tools    //including tabbed
   sudo apt install wmctrl
 
+* install ueberzug
+  sudo apt install libxres-dev
+  cd /opt/apps/ueberzug
+  sudo ./setup install
+
 ********************************************************
 * SanDisk Extreme Portable SSD not detected
   sudo apt install exfat-fuse
@@ -306,6 +311,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install libgtk2.0-dev
   //sudo apt install libgtk2.0-0=2.24.30-1ubuntu1  (if dependency error reported)
   sudo apt install libgnutls-dev 
+  sudo apt install libxft-dev  (for /opt/apps/sxiv)
   make
   sudo make install
 
