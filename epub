@@ -14,3 +14,7 @@ txt2epub --keep-line-breaks output.epub input.txt
 
 //not working
 txt2ebook -f epub input.txt
+
+
+//add all images in a direcotry into a epub file
+epubimage <path_image_dir>
