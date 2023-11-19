@@ -1,3 +1,8 @@
+https://github.com/ArminLau/MangaEpubPacker
+https://github.com/mtshrmn/nuber
+https://github.com/AVeenstra/Images_To_ePub
+https://github.com/wustho/epy
+
 //merge multiple epub files into one (with -k we can unmerge it into multiple files)
 epubmerge -k -c cover.jpg -o output.epub input_1.epub input_2.epub
 
