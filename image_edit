@@ -1,1 +1,14 @@
-convert -resize 1024x768 input.jpg output.jpg
+#sudo apt-get install imagemagick
+
+convert -resize 1024x768 src.png dst.jpg
+convert -resize 80% src.png dst.jpg
+
+ffmpeg -i src.jpg -s 1024x768 dst.jpg
+
+#The command mogrify overwrites the original files with the resized images:
+#You can add -auto-orient to automatically orient converted images.
+mogrify -resize 50% *.png          # keep image aspect ratio
+mogrify -resize 320x240 *.png      # keep image aspect ratio
+mogrify -resize 320x240! *.png     # don't keep image aspect ratio
+mogrify -resize x240 *.png         # don't keep image aspect ratio
+mogrify -resize 320x *.png         # don't keep image aspect ratio
