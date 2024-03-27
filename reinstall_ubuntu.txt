@@ -31,6 +31,9 @@
   sudo apt update
   sudo apt install vim
 
+* generate help tags for all plugins
+  :helptags ALL
+
 ********************************************************
 * install powerline
   refer the webpage in ~/docs/webs:
@@ -109,7 +112,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   git clone https://github.com/tmux/tmux.git /opt/apps/tmux
   cd tmux
   sh autogen.sh
-  ./configure && make
+  ./configure && make && sudo make install
 
   sudo apt install vlock
   sudo apt install tty-clock
@@ -140,8 +143,15 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo dpkg -i /opt/misc/apps/fd_x.x.x_i386.deb
   sudo dpkg -i /opt/misc/apps/bat_x.x.x_i386.deb (20.04: sudo apt install bat)
   sudo dpkg -i /opt/misc/apps/buku_x.x-x_all.deb (sudo apt install python3-cryptography)
+  sudo dpkg -i /opt/misc/apps/dfu_xxx.deb
+  sudo dpkg -i /opt/misc/apps/lsd_xxx.deb
 
   sogoupinyin_4.0.0.1605_amd64.deb  //sogou.com
+
+********************************************************
+  pip3 install git+https://github.com/wustho/epy
+  sudo apt install calibre   //to use "ebook-convert"/"ebook-viewer"
+  sudo snap install foliate  //ebook reader
 
 ********************************************************
 * disabel auto-mount u-disk devices
@@ -205,6 +215,29 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install libxres-dev
   cd /opt/apps/ueberzug
   sudo ./setup install
+
+********************************************************
+* epub2txt
+
+  ### 1 (c)
+  https://github.com/kevinboone/epub2txt2
+  cd /opt/apps/epub2txt
+  make
+  sudo make install
+  (== /opt/util/bins/epub2txt1)
+
+  ### 2 (python)
+  sudo apt-get install libxml2-dev libxslt1-dev
+  pip install lxml
+  pip install EbookLib
+  (== /opt/util/bins/epub2txt2)
+  (== /opt/util/bins/epub2txt3)
+
+  ### 3 (python)
+  https://github.com/ffreemt/epub2txt
+  pip install epub2txt
+  (~/.local/bin/epub2txt -> ~/.local/lib/python3.8/site-packages/epub2txt.py)
+
 
 ********************************************************
 * SanDisk Extreme Portable SSD not detected
@@ -476,6 +509,7 @@ sudo make install
   NoScript
   Tridactyl
   Video DownloadHelper
+  EpubPress
   Dictionary Anywhere (disabled)
   Double-click Image Downloader (disabled)
   EPUBReader (disabled)
@@ -519,7 +553,6 @@ https://github.com/oniony/TMSU
 sudo npm i -g cli-github    //need graphicsmagick installed
 sudo npm i -g gitmoji-cli
 
-pip3 install git+https://github.com/wustho/epy
 pip3 install git+https://github.com/zdict/zdict.git
 pip3 install tldr
 pip3 install rtv
