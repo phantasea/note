@@ -12,3 +12,6 @@ mogrify -resize 320x240 *.png      # keep image aspect ratio
 mogrify -resize 320x240! *.png     # don't keep image aspect ratio
 mogrify -resize x240 *.png         # don't keep image aspect ratio
 mogrify -resize 320x *.png         # don't keep image aspect ratio
+
+#Rotate images
+mogrify -rotate 90  *.webp
