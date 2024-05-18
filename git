@@ -18,7 +18,10 @@ git add .
 git commit -m "first commit"
 git remote add origin https://github.com/phantasea/proj.git
 git push -u origin master
-#if error reports, edit .git/config file
+
+#if error reports, edit .git/config file as vifm, then run as below:
+git fetch --unshallow origin
+git push -u origin master
 
 # add remote repo
 git remote add origin git@github.com:phantasea/proj.git
@@ -80,3 +83,8 @@ git rm --cached path/to/submodule (no trailing slash)
 git commit -m "submodule removed"
 git add path/to/submodule
 git commit -m "path/to/submodule added"
+
+# remove the history from a full clone, and keep the last 50 commits
+# where x is the number of the first commit to be kept
+# and y is the number of the first commit you want to remove
+git rebase --onto commit~y commit~x master
