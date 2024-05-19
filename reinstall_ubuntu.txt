@@ -217,6 +217,8 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo ./setup install
 
 * install imv
+  //sudo apt install imv  (low version --> /usr/bin/imv-x11)
+  cd /opt/apps/imv
   sudo apt install libxkbcommon-x11-dev
   sudo apt install libpangocairo-1.0-0
   sudo apt install libicu-dev
@@ -622,7 +624,6 @@ sudo apt install mpd
 sudo apt install mpc
 sudo apt install ncmpc
 sudo apt install ncmpcpp
-sudo apt install imv  (low version  /usr/bin/imv-x11)
 sudo apt install sdcv
 sudo apt install translate-shell
 sudo apt install dict
