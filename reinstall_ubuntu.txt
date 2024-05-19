@@ -216,6 +216,14 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   cd /opt/apps/ueberzug
   sudo ./setup install
 
+* install imv
+  sudo apt install libxkbcommon-x11-dev
+  sudo apt install libpangocairo-1.0-0
+  sudo apt install libicu-dev
+  meson --prefix=/usr/local -D windows=x11 build/
+  ninja -C build/
+  sudo ninja -C build/ install
+
 ********************************************************
 * epub2txt
 
@@ -530,11 +538,8 @@ sudo apt update
 sudo apt install weixin
 
 ********************************************************
-git clone --depth=1 vimiv
 git clone --depth=1 vimb
-git clone --depth=1 feh
 git clone --depth=1 pqiv
-git clone --depth=1 sxiv
 git clone --depth=1 nnn
 git clone --depth=1 cmus
 git clone --depth=1 visit1985/mdp    //tpp alternative
@@ -617,6 +622,7 @@ sudo apt install mpd
 sudo apt install mpc
 sudo apt install ncmpc
 sudo apt install ncmpcpp
+sudo apt install imv  (low version  /usr/bin/imv-x11)
 sudo apt install sdcv
 sudo apt install translate-shell
 sudo apt install dict
