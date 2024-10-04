@@ -7,7 +7,7 @@ ffmpeg -i src.jpg -s 1024x768 dst.jpg
 
 #The command mogrify overwrites the original files with the resized images:
 #You can add -auto-orient to automatically orient converted images.
-mogrify -resize 50% *.png          # keep image aspect ratio
+mogrify -resize 50% *.webp         # keep image aspect ratio
 mogrify -resize 320x240 *.png      # keep image aspect ratio
 mogrify -resize 320x240! *.png     # don't keep image aspect ratio
 mogrify -resize x240 *.png         # don't keep image aspect ratio

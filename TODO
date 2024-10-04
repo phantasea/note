@@ -1,3 +1,5 @@
+ranger: dot cmd not using rename/search history, like vifm
+
 vifm: column_view.c/columns_format_line: cause chinese file name issue
 
 fffm: key with H/M/L/zz/zt/zb/J/K
@@ -103,6 +105,7 @@ ranger: f/F<any>   ---DONE
 # }}}
 
 
+https://github.com/sxyazi/yazi
 https://github.com/Igrom/i3-persist
 https://github.com/okbob/pspg
 https://github.com/johnkerl/miller
