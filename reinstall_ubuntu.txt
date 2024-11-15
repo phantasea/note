@@ -147,6 +147,22 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo dpkg -i /opt/misc/bkup/lsd_xxx.deb
 
   sogoupinyin_4.0.0.1605_amd64.deb  //sogou.com
+  
+  //solve myst crash for emoji
+  //ldd /usr/local/bin/st  --query .so file st is using
+  sudo apt install xutils-dev
+  cd xxx/libxft-libXft-2.3.6
+  ./autogen.sh --sysconfdir=/etc --prefix=/usr --mandir=/usr/share/man
+  make
+  sudo make install
+
+  cd /usr/lib/x86_64-linux-gnu
+  sudo mv libXft.so libXft.so.bak
+  sudo mv libXft.a  libXft.a.bak
+  ll /usr/lib/libXft*
+  sudo cp ../libXft.so.2.3.6 libXft.so.2.3.3
+  sudo cp ../libXft.a  libXft.a
+  sudo cp ../libXft.la libXft.la
 
 ********************************************************
   pip3 install git+https://github.com/wustho/epy
@@ -195,6 +211,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install fuse-zip
   sudo apt install fusefat
   sudo apt install fuseiso
+  sudo apt install btfs
   cd /opt/apps/vifm
   ./configure --disable-desktop-files --without-gtk --without-X11 --without-dyn-X11
   make    (autoreconf --install --force)
@@ -204,6 +221,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install ffmpegthumbnailer
   sudo apt install poppler-utils    //includes pdftoppm which can convert pdf to image 
 
+  //Support zathura with epub
   sudo rm /etc/apt/preferences.d/pin-zathura
   sudo add-apt-repository ppa:spvkgn/zathura-mupdf
   sudo apt-get install zathura zathura-pdf-mupdf
