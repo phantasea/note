@@ -132,7 +132,10 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install lightdm      //during installing one can set the default DM
   sudo apt install exuberant-ctags
   sudo apt install ttf-wqy-zenhei
+  sudo apt install ttf-unifont
+  sudo apt install ttf-ancient-fonts-symbola
   sudo apt install xfonts-wqy
+  sudo apt install xfonts-unifont
   sudo apt install fonts-powerline
   sudo apt install fonts-mplus
   sudo apt install fonts-noto
