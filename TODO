@@ -1,3 +1,9 @@
+rm -rf $HOME/.cache/tracker
+ln -s /dev/null $HOME/.cache/tracker
+
+vifm: filetype/xfiletype uniform to imgview/vidplay/audplay/webview/ebookview
+mpi: w-->wide expand
+
 ranger: dot cmd not using rename/search history, like vifm
 
 vifm: column_view.c/columns_format_line: cause chinese file name issue
@@ -136,5 +142,22 @@ https://github.com/seebye/ueberzug
 https://github.com/luakit/luakit
 https://github.com/jarun/Buku
 https://github.com/vivien/i3blocks
+
+AdBlocker Ultimate
+Flash Block (Plus)
+NoScript
+smart-preview
+Tridactyl
+uBlock Origin
+Video DownloadHelper
+Easy Youtube Video Downloader Express (disabled)
+English Popup Dictionary (disabled)
+EpubPress - Read the web offline (disabled)
+EPUBReader (disabled)
+ImageAssistant Batch Image Downloader (disabled)
+Imageye - Image downloader (disabled)
+Immersive Translate - Translate Web & PDF (disabled)
+Split View (disabled)
+Video Downloader professional (disabled)
 
 " vim: set ft=txt foldmethod=marker :
