@@ -1,0 +1,11 @@
+about:config
+
+//double click how to select Chinese word
+intl.icu4x.segmenter.enabled
+
+//disable Alt showing menu bar
+ui.key.menuAccessKeyFocuses
+ui.key.menuAccessKey
+
+//How to stop firefox quiting last tab
+browser.tabs.closeWindowWithLastTab
