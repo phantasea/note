@@ -167,6 +167,8 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo cp ../libXft.a  libXft.a
   sudo cp ../libXft.la libXft.la
 
+  sudo ln -sf libXft.so.2.3.3 libXft.so.2
+
 ********************************************************
   pip3 install git+https://github.com/wustho/epy
   sudo apt install calibre   //to use "ebook-convert"/"ebook-viewer"
