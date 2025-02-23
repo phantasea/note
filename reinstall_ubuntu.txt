@@ -77,6 +77,10 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   #GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
   GRUB_CMDLINE_LINUX_DEFAULT="text"
   GRUB_TERMINAL=console
+
+  //still need to set timeout=0 in /etc/grub.d/30_os-prober
+  GRUB_TIMEOUT=0
+
   ## /boot/grub/grub.cfg -- changing this boot menu file is not working in 20.04 and unnecessary
 2. save the changes and exit vim
 3. update grub

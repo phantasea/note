@@ -1,3 +1,7 @@
+vifm: check the diff for
+  set viewcolumns=-{name},{rating},17{mtime}
+  set viewcolumns=-{name}..,17{mtime}
+
 rm -rf $HOME/.cache/tracker
 ln -s /dev/null $HOME/.cache/tracker
 
