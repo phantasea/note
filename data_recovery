@@ -1,0 +1,5 @@
+sudo apt install testdisk
+//choose specific harddisk/partition, 
+//choose "undelete", then choose the deleted files to recover
+
+sudo apt install undelete
