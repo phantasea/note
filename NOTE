@@ -84,9 +84,12 @@ g!/jpg"/d
 %s/\vjpg"/jpg\r/g
 
 ^0[0-9]*.(webp|jpg)
+^[0-9]{1,4}.(webp|jpg|jpeg)
 
 《》
 第X章
+第X卷
+（第X卷）
 （第X章）
 （1-11章）
 （1-11全）

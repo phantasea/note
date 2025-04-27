@@ -1,3 +1,7 @@
+vifm: suggestbox for s/, only showing very short time
+
+vifm: menu is using suggestbox color  ---DONE
+
 vifm: check the diff for
   set viewcolumns=-{name},{rating},17{mtime}
   set viewcolumns=-{name}..,17{mtime}
@@ -144,8 +148,10 @@ https://github.com/joehillen/sysz
 https://github.com/kdheepak/taskwarrior-tui
 https://github.com/seebye/ueberzug
 https://github.com/luakit/luakit
+https://github.com/kimtore/pms
 https://github.com/jarun/Buku
 https://github.com/vivien/i3blocks
+https://github.com/tfeldmann/organize
 
 AdBlocker Ultimate
 Flash Block (Plus)
