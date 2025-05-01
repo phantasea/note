@@ -423,6 +423,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install rofi
   sudo apt install dmenu
   sudo apt install compton
+  sudo apt install scrot
   sudo apt install i3blocks
   sudo apt install xautolock
   sudo apt install volumeicon-alsa

@@ -8,6 +8,8 @@
 %s/)/）/g
 %s///g
 %s/\.\.\./…/g
+%s/…\./……/g
+%s/\.…/……/g
 %s/——/…/g
 %s/\./。/g
 %s/"/＂/g
@@ -95,6 +97,7 @@ g!/jpg"/d
 （1-11全）
 （1-11完）
 （1-11集全）
+（1-11卷全）
 【内容简介】
 
 finedac nicedac excdate dacdate dacload thxdate excmeta
