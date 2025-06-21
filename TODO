@@ -1,14 +1,19 @@
+epy: formatting missalignment   ---DONE by workaround in /opt/util/epubview
+     https://github.com/wustho/epy/issues/66
+
+ranger/vifm: support to show rating items with fzf
+
 ranger: rating info loading, check if file exists  ---QUIT
 
 vifm: rating info loading, check if file exists  ---DONE
       str_rot_decrypt(path)
       if(path_exists(path, DEREF))
 
-vifm: suggestbox for s/, only showing very short time  ---s:DONE  ,:FAIL
+vifm: suggestbox for s/, only showing very short time  ---DONE
 
 vifm: menu is using suggestbox color  ---DONE
 
-vifm: check the diff for
+vifm: check the diff for              ---FAIL/orig vifm not support well
   set viewcolumns=-{name},{rating},17{mtime}
   set viewcolumns=-{name}..,17{mtime}
 
