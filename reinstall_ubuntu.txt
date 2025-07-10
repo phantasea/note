@@ -167,11 +167,11 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo mv libXft.so libXft.so.bak
   sudo mv libXft.a  libXft.a.bak
   ll /usr/lib/libXft*
-  sudo cp ../libXft.so.2.3.6 libXft.so.2.3.3
+  sudo cp ../libXft.so.2.3.6 libXft.so.2.3.3   ******
   sudo cp ../libXft.a  libXft.a
   sudo cp ../libXft.la libXft.la
 
-  sudo ln -sf libXft.so.2.3.3 libXft.so.2
+  sudo ln -sf libXft.so.2.3.3 libXft.so.2      ******
 
 ********************************************************
   pip3 install git+https://github.com/wustho/epy
