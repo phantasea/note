@@ -1,0 +1,19 @@
+sudo ufw allow samba
+sudo ufw reload
+
+sudo vim /etc/samba/smb.conf
+sudo service smbd restart
+
+# smb.conf
+[global]
+allow insecure wide links = yes
+#follow symlinks=yes
+#unix extensions = no
+
+[sopheau]
+comment = Samba on Ubuntu
+path = /home/simone/temp
+read only = yes
+browsable = yes
+printable = no
+wide links = yes
