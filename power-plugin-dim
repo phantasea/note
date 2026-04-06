@@ -1,0 +1,38 @@
+//show dim status
+gsettings get org.gnome.settings-daemon.plugins.power idle-dim
+
+//disable dimming
+gsettings set org.gnome.settings-daemon.plugins.power idle-dim true
+
+//enable dimming
+gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+
+$ gsettings list-recursively | grep dim
+com.canonical.unity.settings-daemon.plugins.power idle-dim true
+org.gnome.settings-daemon.plugins.power idle-dim true
+com.ubuntu.touch.system dim-timeout uint32 45
+
+$ gsettings list-recursively | grep -E 'sleep|suspend*'
+org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
+org.gnome.settings-daemon.plugins.power power-button-action 'suspend'
+org.gnome.settings-daemon.plugins.power critical-battery-action 'suspend'
+org.gnome.settings-daemon.plugins.power lid-close-suspend-with-external-monitor true
+org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+org.gnome.settings-daemon.plugins.power button-suspend 'suspend'
+org.gnome.settings-daemon.plugins.power button-sleep 'suspend'
+org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 0
+org.gnome.settings-daemon.plugins.power lid-close-ac-action 'suspend'
+org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'suspend'
+org.gnome.settings-daemon.plugins.power lid-close-battery-action 'suspend'
+org.gnome.desktop.screensaver ubuntu-lock-on-suspend true
+org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
+org.gnome.settings-daemon.plugins.power power-button-action 'suspend'
+org.gnome.settings-daemon.plugins.power critical-battery-action 'suspend'
+org.gnome.settings-daemon.plugins.power lid-close-suspend-with-external-monitor true
+org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+org.gnome.settings-daemon.plugins.power button-suspend 'suspend'
+org.gnome.settings-daemon.plugins.power button-sleep 'suspend'
+org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 0
+org.gnome.settings-daemon.plugins.power lid-close-ac-action 'suspend'
+org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'suspend'
+org.gnome.settings-daemon.plugins.power lid-close-battery-action 'suspend'

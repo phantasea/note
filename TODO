@@ -1,3 +1,5 @@
+ranger/vifm: <tab> to run specific preview to show file property
+
 epy: formatting missalignment   ---DONE by workaround in /opt/util/epubview
      https://github.com/wustho/epy/issues/66
 
