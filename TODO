@@ -1,9 +1,14 @@
-ranger/vifm: <tab> to run specific preview to show file property
+vifm: cmdline to show systime  ---DONE
+vifm: cmdline to show Yin/Yang tag  ---DONE
+
+vifm: sort by modtime  ---DONE
+
+ranger/vifm: <tab> to run specific preview to show file property  ---DONE (fileinfo)
 
 epy: formatting missalignment   ---DONE by workaround in /opt/util/epubview
      https://github.com/wustho/epy/issues/66
 
-ranger/vifm: support to show rating items with fzf
+ranger/vifm: support to show rating items with fzf  ---TODO
 
 ranger: rating info loading, check if file exists  ---QUIT
 

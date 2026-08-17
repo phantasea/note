@@ -680,5 +680,6 @@ sudo apt install samba
 sudo apt install python-samba 
 sudo apt install samba-libs 
 sudo apt install samba-dev 
+sudo apt install imagemagick webp jpegoptim pngcrush optipng
 sudo apt install --reinstall ubuntu-desktop  //once desktop failed to login
 ********************************************************
