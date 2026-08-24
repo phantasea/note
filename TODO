@@ -1,5 +1,33 @@
+vifm: filetype uniform to imgview/vidplay/audplay/webview/ebookview  ---TODO
+
+mpi: w-->wide expand  ---TODO
+
+ranger: dot cmd not using rename/search history, like vifm  ---TODO
+
+ranger/vifm: support to show rating items with fzf  ---TODO
+
+ranger: rating info loading, check if file exists  ---QUIT
+
+vifm: column_view.c/columns_format_line: cause chinese file name issue  ---DONE
+  ---Commit 372889e fixed on 2025/04/30 (github)
+
+vifm: check the diff for   ---FAIL/orig vifm not support well
+  set viewcolumns=-{name},{rating},17{mtime}
+  set viewcolumns=-{name}..,17{mtime}
+
+fffm: key with H/M/L/zz/zt/zb/J/K  ---QUIT
+
+rm -rf $HOME/.cache/tracker           ---DONE
+ln -s /dev/null $HOME/.cache/tracker  ---DONE
+
+ranger: ctrl-w in command line, word separator  ---DONE
+
 vifm: cmdline to show systime  ---DONE
 vifm: cmdline to show Yin/Yang tag  ---DONE
+
+ranger: % like in vifm (% without number goes to 50%)  ---DONE
+
+vifm: filter operations keeps config filters in vifm.rc  ---DONE
 
 vifm: sort by modtime  ---DONE
 
@@ -8,10 +36,6 @@ ranger/vifm: <tab> to run specific preview to show file property  ---DONE (filei
 epy: formatting missalignment   ---DONE by workaround in /opt/util/epubview
      https://github.com/wustho/epy/issues/66
 
-ranger/vifm: support to show rating items with fzf  ---TODO
-
-ranger: rating info loading, check if file exists  ---QUIT
-
 vifm: rating info loading, check if file exists  ---DONE
       str_rot_decrypt(path)
       if(path_exists(path, DEREF))
@@ -19,22 +43,6 @@ vifm: rating info loading, check if file exists  ---DONE
 vifm: suggestbox for s/, only showing very short time  ---DONE
 
 vifm: menu is using suggestbox color  ---DONE
-
-vifm: check the diff for              ---FAIL/orig vifm not support well
-  set viewcolumns=-{name},{rating},17{mtime}
-  set viewcolumns=-{name}..,17{mtime}
-
-rm -rf $HOME/.cache/tracker           ---DONE
-ln -s /dev/null $HOME/.cache/tracker  ---DONE
-
-vifm: filetype/xfiletype uniform to imgview/vidplay/audplay/webview/ebookview
-mpi: w-->wide expand
-
-ranger: dot cmd not using rename/search history, like vifm
-
-vifm: column_view.c/columns_format_line: cause chinese file name issue  ---Commit 372889e fixed on 2025/04/30
-
-fffm: key with H/M/L/zz/zt/zb/J/K
 
 tabbed: add ctrl+H tab switch with the last tab   ---DONE
 neofetch: DIY picture   ---QUIT (w3mimg not working)

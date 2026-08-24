@@ -155,7 +155,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 
   sogoupinyin_4.0.0.1605_amd64.deb  //sogou.com
   
-  //solve myst crash for emoji
+  //the color emojis crash issue is fixed in libXft 2.3.6
   //ldd /usr/local/bin/st  --query .so file st is using
   sudo apt install xutils-dev
   cd xxx/libxft-libXft-2.3.6
