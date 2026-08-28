@@ -25,6 +25,23 @@
   exit
 8. press Ctrl_Alt_F7 to switch back to GUI, now the simone can be used to log in
 
+
+********************************************************
+* disabel auto-mount u-disk devices
+  gsettings set org.gnome.desktop.media-handling automount false
+  gsettings set org.gnome.desktop.media-handling automount-open false
+
+* disable "~/.local/share/recently-used.xbel"
+  solution#1:
+  gsettings set org.gnome.desktop.privacy remember-recent-files false
+  gsettings set org.gnome.desktop.privacy remember-app-usage false
+  gsettings set org.gnome.desktop.privacy recent-files-max-age 0
+
+  solution#2: add file (~/.config/gtk-3.0/settings.ini)
+  [Settings]
+  gtk-recent-files-max-age=0
+  gtk-recent-files-limit=0
+
 ********************************************************
 * install latest vim for Ubuntu
   sudo add-apt-repository ppa:jonathonf/vim
@@ -177,11 +194,6 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   pip3 install git+https://github.com/wustho/epy
   sudo apt install calibre   //to use "ebook-convert"/"ebook-viewer"
   sudo snap install foliate  //ebook reader
-
-********************************************************
-* disabel auto-mount u-disk devices
-  gsettings set org.gnome.desktop.media-handling automount false
-  gsettings set org.gnome.desktop.media-handling automount-open false
 
 ********************************************************
 * query the number of colors supported by the terminal with current setting

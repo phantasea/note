@@ -1,5 +1,7 @@
 vifm: filetype uniform to imgview/vidplay/audplay/webview/ebookview  ---TODO
 
+ranger: visual selection (;o/;m)  ---DONE
+
 mpi: w-->wide expand  ---TODO
 
 ranger: dot cmd not using rename/search history, like vifm  ---TODO
