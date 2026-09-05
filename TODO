@@ -1,6 +1,12 @@
+ranger: visual amend  ---TODO
+
+ranger: multiple selections boundary cycle  ---DONE
+vifm: 'O' cmd to cycle multiple selection blocks' boundaries  ---DONE
+
 vifm: filetype uniform to imgview/vidplay/audplay/webview/ebookview  ---TODO
 
-ranger: visual selection (;o/;m)  ---DONE
+ranger: visual selection boundary switch (;o/;m)  ---DONE
+        toggle_visual_mode/visual_to_mid
 
 mpi: w-->wide expand  ---TODO
 
