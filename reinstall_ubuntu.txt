@@ -8,17 +8,20 @@
 5. wait to finish re-installation.
 
 ********************************************************
-* change username chris to simone
+* change username oem/chris to simone
 0. press Ctrl_Alt_F1 to switch to console from GUI
-1. log in with username chris, run below cmd to set root password:
+1. log in with username oem/chris, run below cmd to set root password:
   sudo passwd root
 2. log out
   exit
 3. log in with username root using the password just set
-4. change the username and the home directory
+4. change the username and the home directory (log out the oem account)
   usermod -l simone -d /home/simone -m chris
 5. change the group name
   groupmod -n simone chris
+x. change the 1000:1000 to simone:simone
+  usermod  -u 1000 simone
+  groupmod -g 1000 simone
 6. lock the root account
   passwd -l root
 7. log out
@@ -74,8 +77,8 @@
 ********************************************************
 * replace the /etc/apt/source.list file with the below lines
 ###### Ubuntu Main Repos
-deb http://ro.archive.ubuntu.com/ubuntu/ xenial main restricted universe
-deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial main restricted universe
+#deb http://ro.archive.ubuntu.com/ubuntu/ xenial main restricted universe
+#deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial main restricted universe
 
 ###### Ubuntu Update Repos
 deb http://ro.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe
@@ -172,23 +175,29 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 
   sogoupinyin_4.0.0.1605_amd64.deb  //sogou.com
   
+  sudo apt install libxft-dev
+  sudo apt install libharfbuzz-dev
+
   //the color emojis crash issue is fixed in libXft 2.3.6
   //ldd /usr/local/bin/st  --query .so file st is using
   sudo apt install xutils-dev
-  cd xxx/libxft-libXft-2.3.6
+  cp /opt/misc/bkup/libxft-libXft-2.3.6.tar.gz ~/temp
+  //unzip
+  cd ~/temp/libxft-libXft-2.3.6
   ./autogen.sh --sysconfdir=/etc --prefix=/usr --mandir=/usr/share/man
   make
   sudo make install
 
   cd /usr/lib/x86_64-linux-gnu
-  sudo mv libXft.so libXft.so.bak
+  sudo mv libXft.so.2.3.3 libXft.so.2.3.3.bak
   sudo mv libXft.a  libXft.a.bak
-  ll /usr/lib/libXft*
+  ll libXft*
+  ll ../libXft*
   sudo cp ../libXft.so.2.3.6 libXft.so.2.3.3   ******
   sudo cp ../libXft.a  libXft.a
   sudo cp ../libXft.la libXft.la
 
-  sudo ln -sf libXft.so.2.3.3 libXft.so.2      ******
+  #sudo ln -sf libXft.so.2.3.3 libXft.so.2      ******
 
 ********************************************************
   pip3 install git+https://github.com/wustho/epy
@@ -242,18 +251,19 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install ffmpegthumbnailer
   sudo apt install poppler-utils    //includes pdftoppm which can convert pdf to image 
 
-  //Support zathura with epub
+  //Support zathura with epub  ----only for Ubuntu 20.04
   sudo rm /etc/apt/preferences.d/pin-zathura
   sudo add-apt-repository ppa:spvkgn/zathura-mupdf
-  sudo apt-get install zathura zathura-pdf-mupdf
-
-  sudo apt install suckless-tools    //including tabbed
-  sudo apt install wmctrl
+  sudo apt-get install zathura
+  sudo apt-get install zathura-pdf-poppler zathura-ps
+  sudo apt-get install zathura-pdf-mupdf
 
 * install ueberzug
-  sudo apt install libxres-dev
-  cd /opt/apps/ueberzug
-  sudo ./setup install
+  pip3 install ueberzug
+
+  #sudo apt install libxres-dev
+  #cd /opt/apps/ueberzug
+  #sudo ./setup install
 
 * install imv
   //sudo apt install imv  (low version --> /usr/bin/imv-x11)
@@ -399,9 +409,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
 
 ********************************************************
 * install w3m under /opt/apps/w3m
-  sudo apt install libssl-dev 
-  sudo apt install libgc-dev 
-  sudo apt install surfraw
+  sudo apt install libssl-dev libgc-dev surfraw
   ./configure 
   make
   sudo make install
@@ -426,14 +434,11 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo make install
 
 ********************************************************
-* install i3 & dmenu
-
-  #git clone --depth=1 https://git.suckless.org/dmenu
-  #cd dmenu/
-  #sudo make clean install
+* install i3-4.24
 
   sudo apt install rofi
-  sudo apt install dmenu
+  sudo apt install suckless-tools  //including tabbed and dmenu
+  sudo apt install wmctrl
   sudo apt install compton
   sudo apt install scrot
   sudo apt install i3blocks
@@ -442,17 +447,30 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install inotify-tools
   sudo apt install at
  
-  !!! install the latest i3wm guide:
+  !!! install the latest i3wm guide:  (not working for Ubuntu 20.04 since 2026/09/01)
   https://i3wm.org/docs/repositories.html
+
+  install from source:
+  sudo apt install meson pkg-config
+  sudo apt install libxkbcommon-dev libxkbcommon-x11-dev libxcb-cursor-dev
+  sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev
+  sudo apt install libxcb-xinerama0-dev libxcb-randr0-dev libxcb-shape0-dev libxcb-xrm-dev
+  sudo apt install libyajl-dev libpcre2-dev libev-dev libstartup-notification0-dev libx11-xcb-dev
+
+  cd /path/to/i3-4.24
+  meson setup build
+  ninja -C build/
+  sudo ninja -C build/ install
+  i3 --version
 
   #Python script using i3ipc to connect to i3wm: on window close,
   #if the current workspace is empty, move to the first previous non-empty workspace
   #i3-switch-if-workspace-empty is in /opt/util/misc
-  Install i3ipc-python:   pip3 install i3ipc
-  Add to your i3 config:  exec_always i3-switch-if-workspace-empty
-  Reload i3
+  #Install i3ipc-python:   pip3 install i3ipc
+  #Add to your i3 config:  exec_always i3-switch-if-workspace-empty
+  #Reload i3
 
-  #libinput: Fix your Linux touchpad using libinput
+  #libinput: Fix touchpad "tap-to-click" not working
   sudo apt install xserver-xorg-input-synaptics
   sudo apt install xserver-xorg-input-libinput
   sudo systemctl restart lightdm.service
@@ -553,8 +571,24 @@ make
 sudo make install
 
 ********************************************************
+* firefox install the latest version
+  sudo install -d -m 0755 /etc/apt/keyrings
+  sudo apt-get install wget
+  wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
+  echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
+
+  sudo tee /etc/apt/preferences.d/mozilla > /dev/null << EOF
+  Package: *
+  Pin: origin packages.mozilla.org
+  Pin-Priority: 1000
+  EOF
+
+  sudo apt-get update
+  sudo apt-get install firefox
+
 * firefox addon/extention
   AdBlocker Ultimate
+  Dark Reader
   Flash Block (Plus)
   NoScript
   Tridactyl

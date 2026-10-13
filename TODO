@@ -1,3 +1,7 @@
+vifm: ~/docs/webs  ='F'
+/home/simone  simone:29999
+/home/oem     29999:29999
+
 ranger: visual amend  ---TODO
 
 ranger: multiple selections boundary cycle  ---DONE

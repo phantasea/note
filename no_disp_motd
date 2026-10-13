@@ -1,1 +1,3 @@
 sudo vim /usr/lib/update-notifier/update-motd-updates-available
+
+exit in the very beginning

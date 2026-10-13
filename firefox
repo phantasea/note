@@ -1,5 +1,8 @@
 about:config
 
+//disable nova UI
+browser.nova.enabled
+
 //double click how to select Chinese word
 intl.icu4x.segmenter.enabled
 
