@@ -47,6 +47,7 @@ x. change the 1000:1000 to simone:simone
 
 ********************************************************
 * install latest vim for Ubuntu
+  # vim_9.0.0749-0york0~20.04_amd64.deb (/opt/misc/bkup)
   sudo add-apt-repository ppa:jonathonf/vim
   sudo apt update
   sudo apt install vim
@@ -110,6 +111,11 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   //undo: sudo systemctl set-default graphical.target
 5. restart the system
   shutdown -r now
+
+********************************************************
+# Speed up the timeout for stop job
+sudo vim /etc/systemd/system.conf
+change DefaultTimeoutStopSec=3s
 
 ********************************************************
   sudo apt install fbterm
@@ -252,6 +258,7 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install poppler-utils    //includes pdftoppm which can convert pdf to image 
 
   //Support zathura with epub  ----only for Ubuntu 20.04
+  # zathura-pdf-mupdf_0.3.5-ppa1~20.04_amd64.deb  (/opt/misc/bkup)
   sudo rm /etc/apt/preferences.d/pin-zathura
   sudo add-apt-repository ppa:spvkgn/zathura-mupdf
   sudo apt-get install zathura
@@ -457,6 +464,8 @@ deb-src http://ro.archive.ubuntu.com/ubuntu/ xenial-updates main restricted univ
   sudo apt install libxcb-xinerama0-dev libxcb-randr0-dev libxcb-shape0-dev libxcb-xrm-dev
   sudo apt install libyajl-dev libpcre2-dev libev-dev libstartup-notification0-dev libx11-xcb-dev
 
+  # i3-4.24 for Ubuntu 20.04
+  # /opt/misc/bkup/i3-4.24.tar.xz
   cd /path/to/i3-4.24
   meson setup build
   ninja -C build/
@@ -588,11 +597,14 @@ sudo make install
 
 * firefox addon/extention
   AdBlocker Ultimate
+  AdGuard AdBlocker
+  Popup Blocker
   Dark Reader
   Flash Block (Plus)
   NoScript
   Tridactyl
   Video DownloadHelper
+  Video Download Helper
   EpubPress
   Dictionary Anywhere (disabled)
   Double-click Image Downloader (disabled)
@@ -718,7 +730,6 @@ sudo apt install vnstat
 sudo apt install vmstat
 sudo apt install sngrep
 sudo apt install apvlv 
-sudo apt install zathura
 sudo apt install unity-tweak-tool
 sudo apt install powertop
 sudo apt install tlp tlp-rdw

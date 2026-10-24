@@ -1,4 +1,6 @@
 about:config
+about:support
+about:cache?storage=memory
 
 //disable nova UI
 browser.nova.enabled
