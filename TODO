@@ -1,6 +1,11 @@
-vifm: ~/docs/webs  ='F'
-/home/simone  simone:29999
-/home/oem     29999:29999
+vifm: compare command's output for id width  --DONE
+--https://q2a.vifm.info/2530/how-to-set-the-sequence-number-width-for-compare-custom-view
+
+ranger: add cmd :boundary[!] like in vifm  --DONE
+
+vifm: ~/docs/webs  ='F'  ---QUIT
+/home/simone  simone:29999  ---DONE (changed to simone:simone)
+/home/oem     29999:29999  ---DONE (/home/oem removed)
 
 ranger: visual amend  ---TODO
 
