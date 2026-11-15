@@ -1,3 +1,14 @@
+vifm: add cmd: g/pat/cmd, v/pat/cmd  --DONE
+
+vifm: add builtin function: setcmdpos(N)  --DONE
+
+vifm: add repeat builtin function for multiple <left>  --QUIT (use setcmdpos())
+      refer to 'oe' mapping
+      nnoremap <expr> gd ":select//i|d" . repeat("\<Left>", 4))
+
+rofi: -dmenu keymap  --DONE
+      rofi config file in /opt/conf/rofi
+
 vifm: compare command's output for id width  --DONE
 --https://q2a.vifm.info/2530/how-to-set-the-sequence-number-width-for-compare-custom-view
 
